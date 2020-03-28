@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-03-28T05:42:14.729Z</updated>
+  <updated>2020-03-28T16:09:25.916Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -17,26 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>node.js hexo blog start</title>
-    <link href="https://sengwoolee.dev/2020/03/28/inital%20post/"/>
-    <id>https://sengwoolee.dev/2020/03/28/inital%20post/</id>
-    <published>2020-03-28T04:00:00.000Z</published>
-    <updated>2020-03-28T05:42:14.729Z</updated>
+    <title>우분투(Ubuntu) 18.04 도커(Docker) 설치</title>
+    <link href="https://sengwoolee.dev/2020/03/29/inital%20post/"/>
+    <id>https://sengwoolee.dev/2020/03/29/inital%20post/</id>
+    <published>2020-03-28T16:09:25.916Z</published>
+    <updated>2020-03-28T16:09:25.916Z</updated>
     
-    <content type="html"><![CDATA[<p>initial post</p>]]></content>
+    <content type="html"><![CDATA[<p>도커(Docker)는 응용 프로그램들을 소프트웨어 컨테이너 안에 배치시키는 일을 자동화하는 오픈 소스 프로젝트입니다.<br>가상머신(Virtual machine)과 비슷하지만 도커의 컨테이너는 더 이식성이 뛰어나고 리소스 친화적이며 호스트(Host) 운영 체제에 더 많이 의존합니다.</p><p>가상머신 환경에서는 게스트(Guest) 운영 체제가 존재하지만 도커의 컨테이너에는 게스트 운영 체제가 없으며 호스트 운영 체제 위에 도커 엔진이 동작됩니다.<br>따라서 일반적인 가상머신보다는 도커의 컨테이너가 더 빠르게 동작합니다.</p><p>우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.</p><p>Step 1</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"</span></span><br><span class="line">sudo apt update</span><br><span class="line">apt-cache policy docker-ce</span><br></pre></td></tr></table></figure><p>명령어를 입력하게 되면 다음 메시지가 출력됩니다.</p><p>Step 2</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker-ce:</span><br><span class="line">  Installed: (none)</span><br><span class="line">  Candidate: 18.06.1~ce~3-0~ubuntu</span><br><span class="line">  Version table:</span><br><span class="line">     18.06.1~ce~3-0~ubuntu 500</span><br><span class="line">        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages</span><br><span class="line">     18.06.0~ce~3-0~ubuntu 500</span><br><span class="line">        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages</span><br><span class="line">     18.03.1~ce~3-0~ubuntu 500</span><br><span class="line">        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages</span><br></pre></td></tr></table></figure><p>다음 명령어로 도커를 설치할 수 있습니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install docker-ce</span><br></pre></td></tr></table></figure><p>다음 명령어로 도커가 정상적으로 실행 중인지 확인할 수 있습니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status docker</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;initial post&lt;/p&gt;
-
+        &lt;p&gt;도커(Docker)는 응용 프로그램들을 소프트웨어 컨테이너 안에 배치시키는 일을 자동화하는 오픈 소스 프로젝트입니다.&lt;br&gt;가상머신(Virtual machine)과 비슷하지만 도커의 컨테이너는 더 이식성이 뛰어나고 리소스 친화적이며 호스트(Hos
       
     
     </summary>
     
     
-      <category term="nodejs" scheme="https://sengwoolee.dev/categories/nodejs/"/>
+      <category term="Docker" scheme="https://sengwoolee.dev/categories/Docker/"/>
     
     
   </entry>
