@@ -15,7 +15,7 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"]},"articleBody":"도커(Docker)는 응용 프로그램들을 소프트웨어 컨테이너 안에 배치시키는 일을 자동화하는 오픈 소스 프로젝트입니다.가상머신(Virtual machine)과 비슷하지만 도커의 컨테이너는 더 이식성이 뛰어나고 리소스 친화적이며 호스트(Host) 운영 체제에 더 많이 의존합니다.\n가상머신 환경에서는 게스트(Guest) 운영 체제가 존재하지만 도커의 컨테이너에는 게스트 운영 체제가 없으며 호스트 운영 체제 위에 도커 엔진이 동작됩니다.따라서 일반적인 가상머신보다는 도커의 컨테이너가 더 빠르게 동작합니다.\n우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.\nStep 1\n123456sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-commoncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable\"sudo apt updateapt-cache policy docker-ce\n\n명령어를 입력하게 되면 다음 메시지가 출력됩니다.\nStep 2\n12345678910docker-ce:  Installed: (none)  Candidate: 18.06.1~ce~3-0~ubuntu  Version table:     18.06.1~ce~3-0~ubuntu 500        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages     18.06.0~ce~3-0~ubuntu 500        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages     18.03.1~ce~3-0~ubuntu 500        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages\n\n다음 명령어로 도커를 설치할 수 있습니다.\n1sudo apt install docker-ce\n\n다음 명령어로 도커가 정상적으로 실행 중인지 확인할 수 있습니다.\n1sudo systemctl status docker","dateCreated":"2020-03-29T01:09:25+09:00","dateModified":"2020-03-29T01:09:25+09:00","datePublished":"2020-03-29T01:09:25+09:00","description":"","headline":"우분투(Ubuntu) 18.04 도커(Docker) 설치","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/03/29/inital%20post/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"]},"url":"https://sengwoolee.dev/2020/03/29/inital%20post/"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"도커(Docker)는 응용 프로그램들을 소프트웨어 컨테이너 안에 배치시키는 일을 자동화하는 오픈 소스 프로젝트입니다.가상머신(Virtual machine)과 비슷하지만 도커의 컨테이너는 더 이식성이 뛰어나고 리소스 친화적이며 호스트(Host) 운영 체제에 더 많이 의존합니다.\n가상머신 환경에서는 게스트(Guest) 운영 체제가 존재하지만 도커의 컨테이너에는 게스트 운영 체제가 없으며 호스트 운영 체제 위에 도커 엔진이 동작됩니다.따라서 일반적인 가상머신보다는 도커의 컨테이너가 더 빠르게 동작합니다.\n우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.\nStep 1\n123456sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-commoncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable\"sudo apt updateapt-cache policy docker-ce\n\n명령어를 입력하게 되면 다음 메시지가 출력됩니다.\nStep 2\n12345678910docker-ce:  Installed: (none)  Candidate: 18.06.1~ce~3-0~ubuntu  Version table:     18.06.1~ce~3-0~ubuntu 500        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages     18.06.0~ce~3-0~ubuntu 500        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages     18.03.1~ce~3-0~ubuntu 500        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages\n\n다음 명령어로 도커를 설치할 수 있습니다.\n1sudo apt install docker-ce\n\n다음 명령어로 도커가 정상적으로 실행 중인지 확인할 수 있습니다.\n1sudo systemctl status docker","dateCreated":"2020-03-29T01:09:25+09:00","dateModified":"2020-03-29T01:09:25+09:00","datePublished":"2020-03-29T01:09:25+09:00","description":"","headline":"우분투(Ubuntu) 18.04 도커(Docker) 설치","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/03/29/inital%20post/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/03/29/inital%20post/"}</script>
     <meta name="description" content="도커(Docker)는 응용 프로그램들을 소프트웨어 컨테이너 안에 배치시키는 일을 자동화하는 오픈 소스 프로젝트입니다.가상머신(Virtual machine)과 비슷하지만 도커의 컨테이너는 더 이식성이 뛰어나고 리소스 친화적이며 호스트(Host) 운영 체제에 더 많이 의존합니다. 가상머신 환경에서는 게스트(Guest) 운영 체제가 존재하지만 도커의 컨테이너에는">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="우분투(Ubuntu) 18.04 도커(Docker) 설치">
@@ -31,6 +31,8 @@
     
         
     
+    
+        <meta property="og:image" content="https://sengwoolee.dev/assets/images/sengwoolee.png"/>
     
     
     
@@ -64,6 +66,10 @@
 
 
     
+        
+            
+        
+    
 
 <header id="header" data-behavior="3">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
@@ -85,6 +91,8 @@
             >
         
         
+            <img class="header-picture" src="/assets/images/sengwoolee.png" alt="Author&#39;s picture"/>
+        
         </a>
     
 </header>
@@ -92,8 +100,26 @@
             <!-- Define author's picture -->
 
 
+
+        
+    
+
 <nav id="sidebar" data-behavior="3">
     <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a
+                    href="/#about"
+                    aria-label="Read more about the author"
+                >
+                    <img class="sidebar-profile-picture" src="/assets/images/sengwoolee.png" alt="Author&#39;s picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">sengwoolee</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Software Developer, Project Manager, Data Analyst, Quality Assurance</p>
+</h5>
+                
+            </div>
         
         
             <ul class="sidebar-buttons">
@@ -457,22 +483,28 @@
         
 
 
+    
+        
+    
+
 <div id="about">
     <div id="about-card">
         <div id="about-btn-close">
             <i class="fa fa-times"></i>
         </div>
         
+            <img id="about-card-picture" src="/assets/images/sengwoolee.png" alt="Author&#39;s picture"/>
+        
             <h4 id="about-card-name">sengwoolee</h4>
         
-            <div id="about-card-bio"><p>author.bio</p>
+            <div id="about-card-bio"><p>Software Developer, Project Manager, Data Analyst, Quality Assurance</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <p>author.job</p>
+                <p>Consalad Web Frontend/Backend Developer</p>
 
             </div>
         
@@ -480,7 +512,7 @@
             <div id="about-card-location">
                 <i class="fa fa-map-marker-alt"></i>
                 <br/>
-                대한민국/서울
+                Korea / Seoul
             </div>
         
     </div>
