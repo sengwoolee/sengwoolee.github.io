@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="sengwoolee">
-    <title>Archives - sengwoolee</title>
+    <title>우분투(Ubuntu) 18.04 도커(Docker) 설치 - sengwoolee</title>
     <meta name="author" content="sengwoolee">
     
     
@@ -15,14 +15,16 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{}</script>
-    <meta name="description" content="sengwoolee&#39;s development blog">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.\nStep 1\n123456sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-commoncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable\"sudo apt updateapt-cache policy docker-ce\n\n명령어를 입력하게 되면 다음 메시지가 출력됩니다.\nStep 2\n12docker-ce:  Installed: (none)\n\nInstalled none 에서 도커가 설치되지 않았음을 확인할 수 있습니다.다음 명령어로 도커를 설치할 수 있습니다.\n1sudo apt install docker-ce\n\n다음 명령어로 도커가 정상적으로 실행 중인지 확인할 수 있습니다.\n1sudo systemctl status docker\n\n위 명령어 입력 시 아래와 같은 메시지가 출력됩니다.\n123456789petrucio@swlee-laptop:~/문서/sengwoolee_devsite$ sudo systemctl status docker● docker.service - Docker Application Container Engine   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)   Active: active (running) since Sun 2020-03-29 14:45:41 KST; 28min ago     Docs: https://docs.docker.com Main PID: 1858 (dockerd)    Tasks: 13   CGroup: /system.slice/docker.service           └─1858 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock","dateCreated":"2020-03-31T00:55:02+09:00","dateModified":"2020-03-31T00:55:02+09:00","datePublished":"2020-03-31T00:55:02+09:00","description":"","headline":"우분투(Ubuntu) 18.04 도커(Docker) 설치","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/03/31/2020-03-29-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/03/31/2020-03-29-1/"}</script>
+    <meta name="description" content="우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다. Step 1 123456sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-commoncurl -fsSL https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;u">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="sengwoolee">
-<meta property="og:url" content="https://sengwoolee.dev/archives/index.html">
+<meta property="og:title" content="우분투(Ubuntu) 18.04 도커(Docker) 설치">
+<meta property="og:url" content="https://sengwoolee.dev/2020/03/31/2020-03-29-1/index.html">
 <meta property="og:site_name" content="sengwoolee">
-<meta property="og:description" content="sengwoolee&#39;s development blog">
+<meta property="og:description" content="우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다. Step 1 123456sudo apt updatesudo apt install apt-transport-https ca-certificates curl software-properties-commoncurl -fsSL https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;u">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-30T15:55:02.296Z">
+<meta property="article:modified_time" content="2020-03-30T15:55:02.296Z">
 <meta property="article:author" content="sengwoolee">
 <meta name="twitter:card" content="summary">
     
@@ -54,6 +56,8 @@
     
 
     
+        
+    
 </head>
 
     <body>
@@ -67,7 +71,7 @@
         
     
 
-<header id="header" data-behavior="2">
+<header id="header" data-behavior="5">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a
@@ -100,7 +104,7 @@
         
     
 
-<nav id="sidebar" data-behavior="2">
+<nav id="sidebar" data-behavior="5">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -266,30 +270,22 @@
 </nav>
 
             
-            <div id="main" data-behavior="2"
+            <div id="main" data-behavior="5"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2020/03/31/2020-03-29-1/"
-                            aria-label=": 우분투(Ubuntu) 18.04 도커(Docker) 설치"
-                        >
-                            우분투(Ubuntu) 18.04 도커(Docker) 설치
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            우분투(Ubuntu) 18.04 도커(Docker) 설치
+        </h1>
+    
+    
+        <div class="post-meta">
     <time datetime="2020-03-31T00:55:02+09:00">
 	
 		    Mar 31, 2020
@@ -304,10 +300,13 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-content">
-                    <p>우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.</p>
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.</p>
 <p>Step 1</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"</span></span><br><span class="line">sudo apt update</span><br><span class="line">apt-cache policy docker-ce</span><br></pre></td></tr></table></figure>
 
@@ -323,110 +322,89 @@
 
 <p>위 명령어 입력 시 아래와 같은 메시지가 출력됩니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">petrucio@swlee-laptop:~/문서/sengwoolee_devsite$ sudo systemctl status docker</span><br><span class="line">● docker.service - Docker Application Container Engine</span><br><span class="line">   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)</span><br><span class="line">   Active: active (running) since Sun 2020-03-29 14:45:41 KST; 28min ago</span><br><span class="line">     Docs: https://docs.docker.com</span><br><span class="line"> Main PID: 1858 (dockerd)</span><br><span class="line">    Tasks: 13</span><br><span class="line">   CGroup: /system.slice/docker.service</span><br><span class="line">           └─1858 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock</span><br></pre></td></tr></table></figure>
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2020/03/31/2020-03-29-1/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
             
+
+
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2020/03/31/2020-03-30-1/"
-                            aria-label=": 우분투(Ubuntu) 18.04 Docker Container"
-                        >
-                            우분투(Ubuntu) 18.04 Docker Container
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2020-03-31T00:30:29+09:00">
-	
-		    Mar 31, 2020
-    	
-    </time>
-    
-        <span>in </span>
         
-    <a class="category-link" href="/categories/Docker/">Docker</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <p>docker run hello-world </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">root@swlee-laptop:/home/petrucio<span class="comment"># docker run hello-world</span></span><br><span class="line">Unable to find image <span class="string">'hello-world:latest'</span> locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">1b930d010525: Pull complete </span><br><span class="line">Digest: sha256:f9dfddf63636d84ef479d645ab5885156ae030f611a56f3a7ac7f2fdd86d7e4e</span><br><span class="line">Status: Downloaded newer image <span class="keyword">for</span> hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the <span class="string">"hello-world"</span> image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image <span class="built_in">which</span> runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, <span class="built_in">which</span> sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/get-started/</span><br></pre></td></tr></table></figure>
-
-<p>docker run 명령어 실행 과정</p>
-<p>도커는 실행할 이미지가 로컬에 존재하는지 확인하고, 존재하지 않으면 이미지를 다운로드한다.<br>이미지 파일은 도커 허브에서 해당 이미지 파일을 다운로드한다. 다운로드가 끝나면 이미지에서 컨테이너를 생성하고 실행한다.<br>프로그램 파일이 있고 그 프로그램을 실행하면 프로세스가 생기는 것처럼 이미지 파일이 있고 이 이미지를 실행하면 컨테이너가 생성된다.</p>
-<p>docker images 명령어를 실행하면 로컬에 설치된 이미지를 표시한다. 실행하면 다음과 같이 hello-world:latest 이미지가 존재하는 것을 확인할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@swlee-laptop:/home/petrucio<span class="comment"># docker images</span></span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">hello-world         latest              fce289e99eb9        15 months ago       1.84kB</span><br></pre></td></tr></table></figure>
-
-<p>docker container ls -a 명령어로 현재 컨테이너 목록을 확인할 수 있다.<br>docker run 명령어는 실행할 때마다 컨테이너를 생성하므로 docker run hello-world 명령어를 실행한 횟수만큼 컨테이너가 확인된다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@swlee-laptop:/home/petrucio<span class="comment"># docker container ls -a</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES</span><br><span class="line">c6582e63e4dd        hello-world         <span class="string">"/hello"</span>            4 minutes ago       Exited (0) 4 minutes ago                       gallant_allen</span><br></pre></td></tr></table></figure>
-
-<p>컨테이너(Container)</p>
-<p>컨테이너 대한 소개는 <a href="https://www.docker.com/resources/what-container" target="_blank" rel="noopener">https://www.docker.com/resources/what-container</a> 문서를 참고한다. </p>
-<blockquote>
-<p>Containers are an abstraction at the app layer that packages code and dependencies together. Multiple containers can run on the same machine and share the OS kernel with other containers, each running as isolated processes in user space. Containers take up less space than VMs (container images are typically tens of MBs in size), can handle more applications and require fewer VMs and Operating systems.</p>
-</blockquote>
-
-                    
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
                         
-
-
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
                     
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2020/03/31/2020-03-30-1/"
+                    data-tooltip="우분투(Ubuntu) 18.04 Docker Container"
+                    aria-label="NEXT: 우분투(Ubuntu) 18.04 Docker Container"
+                >
                     
-                        <p>
-                            <a
-                                href="/2020/03/31/2020-03-30-1/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
             
-        </div>
+                <li class="post-action">
+                    <a
+                        class="post-action-btn btn btn--default"
+                        href="#disqus_thread"
+                        aria-label="Leave a comment"
+                    >
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
-        
-        
-        <li class="pagination-number">page 1 of 1</li>
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
 
 
 
@@ -437,6 +415,76 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2020/03/31/2020-03-30-1/"
+                    data-tooltip="우분투(Ubuntu) 18.04 Docker Container"
+                    aria-label="NEXT: 우분투(Ubuntu) 18.04 Docker Container"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+        
+            
+                <li class="post-action">
+                    <a
+                        class="post-action-btn btn btn--default"
+                        href="#disqus_thread"
+                        aria-label="Leave a comment"
+                    >
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+
             
         </div>
         
@@ -495,6 +543,25 @@
 
 <!--SCRIPTS END-->
 
+
+    
+        <script>
+          var disqus_config = function() {
+            this.page.url = 'https://sengwoolee.dev/2020/03/31/2020-03-29-1/';
+              
+            this.page.identifier = '2020/03/31/2020-03-29-1/';
+              
+          };
+          (function() {
+            var d = document, s = d.createElement('script');
+            var disqus_shortname = 'sengwoolee-devsite';
+            s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+    
 
 
 
