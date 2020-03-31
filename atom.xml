@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-03-30T15:55:02.296Z</updated>
+  <updated>2020-03-31T16:49:39.146Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행</title>
+    <link href="https://sengwoolee.dev/2020/04/01/2020-04-01-1/"/>
+    <id>https://sengwoolee.dev/2020/04/01/2020-04-01-1/</id>
+    <published>2020-03-31T16:24:40.000Z</published>
+    <updated>2020-03-31T16:49:39.146Z</updated>
+    
+    <content type="html"><![CDATA[<!--excerpt--><!--toc-->]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Step1-도커-파일-만들기&quot;&gt;&lt;a href=&quot;#Step1-도커-파일-만들기&quot; class=&quot;headerlink&quot; title=&quot;Step1 도커 파일 만들기&quot;&gt;&lt;/a&gt;Step1 도커 파일 만들기&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Dockerfile&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;FROM ubuntu:18.04&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RUN apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;RUN apt install apache2 -y&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ENV APACHE_RUN_USER www-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ENV APACHE_RUN_GROUP www-data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ENV APACHE_LOG_DIR /var/&lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;/apache2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ENV APACHE_PID_FILE /var/run/apache2/apache2.pid &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;EXPOSE 80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CMD [&lt;span class=&quot;string&quot;&gt;&quot;/usr/sbin/apache2ctl&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;-D&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;FOREGROUND&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;FROM = 기반 이미지 설정&lt;br&gt;RUN = 명령어 실행&lt;br&gt;ENV = 환경 변수&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Step2-도커-로그인-및-이미지-빌드&quot;&gt;&lt;a href=&quot;#Step2-도커-로그인-및-이미지-빌드&quot; class=&quot;headerlink&quot; title=&quot;Step2 도커 로그인 및 이미지 빌드&quot;&gt;&lt;/a&gt;Step2 도커 로그인 및 이미지 빌드&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ docker build -t ubuntutest .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;-t = tag 태그의 줄임말&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Step3-도커-이미지-실행-및-컨테이너-생성&quot;&gt;&lt;a href=&quot;#Step3-도커-이미지-실행-및-컨테이너-생성&quot; class=&quot;headerlink&quot; title=&quot;Step3 도커 이미지 실행 및 컨테이너 생성&quot;&gt;&lt;/a&gt;Step3 도커 이미지 실행 및 컨테이너 생성&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker run -d -p 80:80 ubuntutest&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;-p = 포트를 나타내며 앞 80은 외부 접근 포트번호, 뒤 80은 내부 연결 포트번호&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Step4-실행중인-도커-컨테이너-목록-확인&quot;&gt;&lt;a href=&quot;#Step4-실행중인-도커-컨테이너-목록-확인&quot; class=&quot;headerlink&quot; title=&quot;Step4 실행중인 도커 컨테이너 목록 확인&quot;&gt;&lt;/a&gt;Step4 실행중인 도커 컨테이너 목록 확인&lt;/h3&gt;&lt;p&gt;실행중인 컨테이너 목록을 확인합니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker container ls&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&quot;Step5-컨테이너-접근&quot;&gt;&lt;a href=&quot;#Step5-컨테이너-접근&quot; class=&quot;headerlink&quot; title=&quot;Step5 컨테이너 접근&quot;&gt;&lt;/a&gt;Step5 컨테이너 접근&lt;/h3&gt;&lt;p&gt;컨테이너 아이디를 입력해서 bash 에 접근합니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker &lt;span class=&quot;built_in&quot;&gt;exec&lt;/span&gt; -it 9531b /bin/bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="https://sengwoolee.dev/categories/Docker/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>우분투(Ubuntu) 18.04 도커(Docker) 설치</title>
