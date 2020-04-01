@@ -281,6 +281,67 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/04/01/2020-04-01-2/"
+                            aria-label=": 도커(Docker) 컨테이너 내 php 설치"
+                        >
+                            도커(Docker) 컨테이너 내 php 설치
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-04-01T23:21:56+09:00">
+	
+		    Apr 01, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Docker/">Docker</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>아래 작업은 root 권한으로 작업합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">$ apt install php</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 코어</span></span><br><span class="line">$ apt install php7.3 php7.3-common php7.3-cli</span><br><span class="line"><span class="comment"># 익스텐션</span></span><br><span class="line">$ apt install php7.2-bcmath php7.2-bz2 php7.2-curl php7.2-gd php7.2-intl php7.2-json php7.2-mbstring php7.2-readline php7.2-xml php7.2-zip</span><br><span class="line"><span class="comment"># 아파치 연동 모델</span></span><br><span class="line">$ apt install libapache2-mod-php7.2 </span><br><span class="line"><span class="comment"># 편집기 vim</span></span><br><span class="line">$ apt install vim</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 버전 확인</span></span><br><span class="line">$ php -v</span><br></pre></td></tr></table></figure>
+
+<p>php 설치가 완료되었습니다. </p>
+                    
+                        <a
+                            href="/2020/04/01/2020-04-01-2/"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": 도커(Docker) 컨테이너 내 php 설치"
+                        >
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/04/01/2020-04-01-1/"
                             aria-label=": 도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행"
                         >
