@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-01T14:57:11.561Z</updated>
+  <updated>2020-04-03T15:02:28.602Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -17,27 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>도커(Docker) 컨테이너 내 php 설치</title>
-    <link href="https://sengwoolee.dev/2020/04/01/2020-04-01-2/"/>
-    <id>https://sengwoolee.dev/2020/04/01/2020-04-01-2/</id>
-    <published>2020-04-01T14:21:56.000Z</published>
-    <updated>2020-04-01T14:57:11.561Z</updated>
+    <title>소프트웨어 개발 환경 - local, dev, integration, qa, stage, production</title>
+    <link href="https://sengwoolee.dev/2020/04/03/2020-04-03-1/"/>
+    <id>https://sengwoolee.dev/2020/04/03/2020-04-03-1/</id>
+    <published>2020-04-03T14:35:34.000Z</published>
+    <updated>2020-04-03T15:02:28.602Z</updated>
     
     <content type="html"><![CDATA[<!--excerpt--><!--toc-->]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;컨테이너 아이디를 입력해서 bash 에 접근합니다.&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ docker &lt;span class=&quot;built_in&quot;&gt;exec&lt;/span&gt; -it 9531b /bin/bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;아래 작업은 root 권한으로 작업합니다.&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ su&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ apt install php&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# php 코어&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ apt install php7.3 php7.3-common php7.3-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 익스텐션&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ apt install php7.2-bcmath php7.2-bz2 php7.2-curl php7.2-gd php7.2-intl php7.2-json php7.2-mbstring php7.2-readline php7.2-xml php7.2-zip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 아파치 연동 모델&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ apt install libapache2-mod-php7.2 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 편집기 vim&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ apt install vim&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# php 버전 확인&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ php -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;php 설치가 완료되었습니다. &lt;/p&gt;
+      &lt;p&gt;일반적으로 사용되는 소프트웨어 개발 환경에 대해 작성한다.&lt;br&gt;프로젝트 진행에 있어 모든 환경을 갖출 필요는 없으며 프로젝트 환경에 따라서 각 환경을 합치거나 생략해도 된다.&lt;/p&gt;
+&lt;h3 id=&quot;로컬-Local&quot;&gt;&lt;a href=&quot;#로컬-Local&quot; class=&quot;headerlink&quot; title=&quot;로컬 (Local)&quot;&gt;&lt;/a&gt;로컬 (Local)&lt;/h3&gt;&lt;p&gt;각 개발 PC 에 개발 및 테스트 환경 및 서버를 셋업한 환경을 말한다.&lt;br&gt;로컬 서버 환경에서의 개발에서 주의할 부분은 모든 개발자가 같은 개발 환경을 사용해야 한다는 것이다.&lt;br&gt;서로 다른 개발 환경에서 작업한 코드를 머지할 때 로컬 환경에서 잘 작동했던 코드가 작동하지 않는 경우가 많다.&lt;br&gt;전체 개발 환경을 zip 파일 형태로 묶어서 사용하거나 Docker 등의 컨테이너 기술을 사용한다. &lt;/p&gt;
+&lt;h3 id=&quot;개발-Dev&quot;&gt;&lt;a href=&quot;#개발-Dev&quot; class=&quot;headerlink&quot; title=&quot;개발 (Dev)&quot;&gt;&lt;/a&gt;개발 (Dev)&lt;/h3&gt;&lt;p&gt;개발자들이 작업한 코드를 머지하여 테스트를 진행할 수 있는 환경이다.&lt;br&gt;소스코드를 형상관리 시스템에 커밋하면 코드는 개발 서버에 배포되고 이 환경에서 개발 테스트(단위 테스트 등)를 진행한다.&lt;/p&gt;
+&lt;h3 id=&quot;통합-개발-Integration&quot;&gt;&lt;a href=&quot;#통합-개발-Integration&quot; class=&quot;headerlink&quot; title=&quot;통합 개발 (Integration)&quot;&gt;&lt;/a&gt;통합 개발 (Integration)&lt;/h3&gt;&lt;p&gt;컴포넌트가 의존성을 가지고 있을 경우 컴포넌트를 통합 및 테스트 하는 환경으로 사용한다.&lt;br&gt;최소한으로 구성하고 개발 환경에서 릴리즈가 되면 주기적으로 통합 개발 환경에 배포한다.&lt;/p&gt;
+&lt;h3 id=&quot;테스트-QA&quot;&gt;&lt;a href=&quot;#테스트-QA&quot; class=&quot;headerlink&quot; title=&quot;테스트 (QA)&quot;&gt;&lt;/a&gt;테스트 (QA)&lt;/h3&gt;&lt;p&gt;QA 엔지니어가 기능 및 비기능 테스트 등을 수행하는 환경이다.&lt;br&gt;테스트를 수행할 때 라이브 환경과 유사한 환경을 만들고 테스트를 수행한다. &lt;/p&gt;
+&lt;h3 id=&quot;스테이지-Stage&quot;&gt;&lt;a href=&quot;#스테이지-Stage&quot; class=&quot;headerlink&quot; title=&quot;스테이지 (Stage)&quot;&gt;&lt;/a&gt;스테이지 (Stage)&lt;/h3&gt;&lt;p&gt;라이브 환경과 거의 동일한 환경을 만들고 라이브 릴리즈 전 최종적으로 비기능적인 부분들의 테스트를 수행하는 환경이다. &lt;/p&gt;
+&lt;h3 id=&quot;프로덕션-라이브-Production-Live&quot;&gt;&lt;a href=&quot;#프로덕션-라이브-Production-Live&quot; class=&quot;headerlink&quot; title=&quot;프로덕션/라이브 (Production/Live)&quot;&gt;&lt;/a&gt;프로덕션/라이브 (Production/Live)&lt;/h3&gt;&lt;p&gt;실제 서비스를 진행하는 환경이다.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>도커(Docker) 컨테이너 내 php 설치</title>
+    <link href="https://sengwoolee.dev/2020/04/01/2020-04-01-2/"/>
+    <id>https://sengwoolee.dev/2020/04/01/2020-04-01-2/</id>
+    <published>2020-04-01T14:21:56.000Z</published>
+    <updated>2020-04-03T14:28:23.039Z</updated>
+    
+    <content type="html"><![CDATA[<p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure><p>아래 작업은 root 권한으로 작업합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">$ apt install php</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 코어</span></span><br><span class="line">$ apt install php7.3 php7.3-common php7.3-cli</span><br><span class="line"><span class="comment"># 익스텐션</span></span><br><span class="line">$ apt install php7.2-bcmath php7.2-bz2 php7.2-curl php7.2-gd php7.2-intl php7.2-json php7.2-mbstring php7.2-readline php7.2-xml php7.2-zip</span><br><span class="line"><span class="comment"># 아파치 연동 모델</span></span><br><span class="line">$ apt install libapache2-mod-php7.2 </span><br><span class="line"><span class="comment"># 편집기 vim</span></span><br><span class="line">$ apt install vim</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 버전 확인</span></span><br><span class="line">$ php -v</span><br></pre></td></tr></table></figure><p>php 설치가 완료되었습니다. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;컨테이너 아이디를 입력해서 bash 에 접근합니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;
+      
     
     </summary>
     

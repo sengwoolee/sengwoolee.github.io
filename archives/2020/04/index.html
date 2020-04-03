@@ -282,6 +282,63 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/04/03/2020-04-03-1/"
+                            aria-label=": 소프트웨어 개발 환경 - local, dev, integration, qa, stage, production"
+                        >
+                            소프트웨어 개발 환경 - local, dev, integration, qa, stage, production
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-04-03T23:35:34+09:00">
+	
+		    Apr 03, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Development/">Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <p>일반적으로 사용되는 소프트웨어 개발 환경에 대해 작성한다.<br>프로젝트 진행에 있어 모든 환경을 갖출 필요는 없으며 프로젝트 환경에 따라서 각 환경을 합치거나 생략해도 된다.</p>
+<h3 id="로컬-Local"><a href="#로컬-Local" class="headerlink" title="로컬 (Local)"></a>로컬 (Local)</h3><p>각 개발 PC 에 개발 및 테스트 환경 및 서버를 셋업한 환경을 말한다.<br>로컬 서버 환경에서의 개발에서 주의할 부분은 모든 개발자가 같은 개발 환경을 사용해야 한다는 것이다.<br>서로 다른 개발 환경에서 작업한 코드를 머지할 때 로컬 환경에서 잘 작동했던 코드가 작동하지 않는 경우가 많다.<br>전체 개발 환경을 zip 파일 형태로 묶어서 사용하거나 Docker 등의 컨테이너 기술을 사용한다. </p>
+<h3 id="개발-Dev"><a href="#개발-Dev" class="headerlink" title="개발 (Dev)"></a>개발 (Dev)</h3><p>개발자들이 작업한 코드를 머지하여 테스트를 진행할 수 있는 환경이다.<br>소스코드를 형상관리 시스템에 커밋하면 코드는 개발 서버에 배포되고 이 환경에서 개발 테스트(단위 테스트 등)를 진행한다.</p>
+<h3 id="통합-개발-Integration"><a href="#통합-개발-Integration" class="headerlink" title="통합 개발 (Integration)"></a>통합 개발 (Integration)</h3><p>컴포넌트가 의존성을 가지고 있을 경우 컴포넌트를 통합 및 테스트 하는 환경으로 사용한다.<br>최소한으로 구성하고 개발 환경에서 릴리즈가 되면 주기적으로 통합 개발 환경에 배포한다.</p>
+<h3 id="테스트-QA"><a href="#테스트-QA" class="headerlink" title="테스트 (QA)"></a>테스트 (QA)</h3><p>QA 엔지니어가 기능 및 비기능 테스트 등을 수행하는 환경이다.<br>테스트를 수행할 때 라이브 환경과 유사한 환경을 만들고 테스트를 수행한다. </p>
+<h3 id="스테이지-Stage"><a href="#스테이지-Stage" class="headerlink" title="스테이지 (Stage)"></a>스테이지 (Stage)</h3><p>라이브 환경과 거의 동일한 환경을 만들고 라이브 릴리즈 전 최종적으로 비기능적인 부분들의 테스트를 수행하는 환경이다. </p>
+<h3 id="프로덕션-라이브-Production-Live"><a href="#프로덕션-라이브-Production-Live" class="headerlink" title="프로덕션/라이브 (Production/Live)"></a>프로덕션/라이브 (Production/Live)</h3><p>실제 서비스를 진행하는 환경이다.</p>
+                    
+                        <a
+                            href="/2020/04/03/2020-04-03-1/"
+                            class="postShorten-excerpt_link link"
+                            aria-label=": 소프트웨어 개발 환경 - local, dev, integration, qa, stage, production"
+                        >
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/04/01/2020-04-01-2/"
                             aria-label=": 도커(Docker) 컨테이너 내 php 설치"
                         >
@@ -306,7 +363,7 @@
 
             </div>
             
-                <div class="postShorten-excerpt">
+                <div class="postShorten-content">
                     <p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure>
 
@@ -318,15 +375,22 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 버전 확인</span></span><br><span class="line">$ php -v</span><br></pre></td></tr></table></figure>
 
 <p>php 설치가 완료되었습니다. </p>
+
                     
-                        <a
-                            href="/2020/04/01/2020-04-01-2/"
-                            class="postShorten-excerpt_link link"
-                            aria-label=": 도커(Docker) 컨테이너 내 php 설치"
-                        >
-                            Continue reading
-                        </a>
                         
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/04/01/2020-04-01-2/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
                     
                 </div>
             
