@@ -15,7 +15,7 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"\n","dateCreated":"2020-04-01T01:24:40+09:00","dateModified":"2020-04-01T01:49:39+09:00","datePublished":"2020-04-01T01:24:40+09:00","description":"우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.\n\nStep1 도커 파일 만들기12345678910111213# DockerfileFROM ubuntu:18.04RUN apt-get updateRUN apt install apache2 -yENV APACHE_RUN_USER www-dataENV APACHE_RUN_GROUP www-dataENV APACHE_LOG_DIR /var/log/apache2ENV APACHE_PID_FILE /var/run/apache2/apache2.pid  EXPOSE 80 CMD [\"/usr/sbin/apache2ctl\", \"-D\", \"FOREGROUND\"]\n\n\nFROM = 기반 이미지 설정RUN = 명령어 실행ENV = 환경 변수\n\n\nStep2 도커 로그인 및 이미지 빌드12$ docker login$ docker build -t ubuntutest .\n\n-t = tag 태그의 줄임말\n\n\nStep3 도커 이미지 실행 및 컨테이너 생성1$ docker run -d -p 80:80 ubuntutest\n\n-p = 포트를 나타내며 앞 80은 외부 접근 포트번호, 뒤 80은 내부 연결 포트번호\n\n\nStep4 실행중인 도커 컨테이너 목록 확인실행중인 컨테이너 목록을 확인합니다.\n1$ docker container ls\n\n\nStep5 컨테이너 접근컨테이너 아이디를 입력해서 bash 에 접근합니다.\n1$ docker exec -it 9531b /bin/bash","headline":"도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/04/01/2020-04-01-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/04/01/2020-04-01-1/"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.\n\nStep1 도커 파일 만들기12345678910111213# DockerfileFROM ubuntu:18.04RUN apt-get updateRUN apt install apache2 -yENV APACHE_RUN_USER www-dataENV APACHE_RUN_GROUP www-dataENV APACHE_LOG_DIR /var/log/apache2ENV APACHE_PID_FILE /var/run/apache2/apache2.pid  EXPOSE 80 CMD [\"/usr/sbin/apache2ctl\", \"-D\", \"FOREGROUND\"]\n\n\nFROM = 기반 이미지 설정RUN = 명령어 실행ENV = 환경 변수\n\n\nStep2 도커 로그인 및 이미지 빌드12$ docker login$ docker build -t ubuntutest .\n\n-t = tag 태그의 줄임말\n\n\nStep3 도커 이미지 실행 및 컨테이너 생성1$ docker run -d -p 80:80 ubuntutest\n\n-p = 포트를 나타내며 앞 80은 외부 접근 포트번호, 뒤 80은 내부 연결 포트번호\n\n\nStep4 실행중인 도커 컨테이너 목록 확인실행중인 컨테이너 목록을 확인합니다.\n1$ docker container ls\n\n\nStep5 컨테이너 접근컨테이너 아이디를 입력해서 bash 에 접근합니다.\n1$ docker exec -it 9531b /bin/bash\n\n","dateCreated":"2020-04-01T01:24:40+09:00","dateModified":"2020-04-04T01:27:14+09:00","datePublished":"2020-04-01T01:24:40+09:00","description":"","headline":"도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/04/01/2020-04-01-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/04/01/2020-04-01-1/"}</script>
     <meta name="description" content="우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.  Step1 도커 파일 만들기12345678910111213# DockerfileFROM ubuntu:18.04RUN apt-get updateRUN apt install apache2 -yENV APACHE_RUN_USER www-dataENV APACHE_RU">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행">
@@ -24,7 +24,7 @@
 <meta property="og:description" content="우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.  Step1 도커 파일 만들기12345678910111213# DockerfileFROM ubuntu:18.04RUN apt-get updateRUN apt install apache2 -yENV APACHE_RUN_USER www-dataENV APACHE_RU">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-31T16:24:40.000Z">
-<meta property="article:modified_time" content="2020-03-31T16:49:39.146Z">
+<meta property="article:modified_time" content="2020-04-03T16:27:14.433Z">
 <meta property="article:author" content="sengwoolee">
 <meta name="twitter:card" content="summary">
     
@@ -184,7 +184,7 @@
                     
                         <a
                             class="sidebar-button-link "
-                            href="#about"
+                            href="/2020/04/04/introduce-myself/"
                             
                             rel="noopener"
                             title="어바웃"
@@ -306,8 +306,32 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <!--excerpt-->
-<h1 id="table-of-contents">Table of Contents</h1>
+            <p>우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.</p>
+<hr>
+<h3 id="Step1-도커-파일-만들기"><a href="#Step1-도커-파일-만들기" class="headerlink" title="Step1 도커 파일 만들기"></a>Step1 도커 파일 만들기</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dockerfile</span></span><br><span class="line">FROM ubuntu:18.04</span><br><span class="line"></span><br><span class="line">RUN apt-get update</span><br><span class="line">RUN apt install apache2 -y</span><br><span class="line">ENV APACHE_RUN_USER www-data</span><br><span class="line">ENV APACHE_RUN_GROUP www-data</span><br><span class="line">ENV APACHE_LOG_DIR /var/<span class="built_in">log</span>/apache2</span><br><span class="line">ENV APACHE_PID_FILE /var/run/apache2/apache2.pid </span><br><span class="line"> </span><br><span class="line">EXPOSE 80</span><br><span class="line"> </span><br><span class="line">CMD [<span class="string">"/usr/sbin/apache2ctl"</span>, <span class="string">"-D"</span>, <span class="string">"FOREGROUND"</span>]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>FROM = 기반 이미지 설정<br>RUN = 명령어 실행<br>ENV = 환경 변수</p>
+</blockquote>
+<hr>
+<h3 id="Step2-도커-로그인-및-이미지-빌드"><a href="#Step2-도커-로그인-및-이미지-빌드" class="headerlink" title="Step2 도커 로그인 및 이미지 빌드"></a>Step2 도커 로그인 및 이미지 빌드</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker login</span><br><span class="line">$ docker build -t ubuntutest .</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-t = tag 태그의 줄임말</p>
+</blockquote>
+<hr>
+<h3 id="Step3-도커-이미지-실행-및-컨테이너-생성"><a href="#Step3-도커-이미지-실행-및-컨테이너-생성" class="headerlink" title="Step3 도커 이미지 실행 및 컨테이너 생성"></a>Step3 도커 이미지 실행 및 컨테이너 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 80:80 ubuntutest</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-p = 포트를 나타내며 앞 80은 외부 접근 포트번호, 뒤 80은 내부 연결 포트번호</p>
+</blockquote>
+<hr>
+<h3 id="Step4-실행중인-도커-컨테이너-목록-확인"><a href="#Step4-실행중인-도커-컨테이너-목록-확인" class="headerlink" title="Step4 실행중인 도커 컨테이너 목록 확인"></a>Step4 실행중인 도커 컨테이너 목록 확인</h3><p>실행중인 컨테이너 목록을 확인합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Step5-컨테이너-접근"><a href="#Step5-컨테이너-접근" class="headerlink" title="Step5 컨테이너 접근"></a>Step5 컨테이너 접근</h3><p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure>
+
+
             
 
 
@@ -375,7 +399,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -465,7 +489,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>

@@ -180,7 +180,7 @@
                     
                         <a
                             class="sidebar-button-link "
-                            href="#about"
+                            href="/2020/04/04/introduce-myself/"
                             
                             rel="noopener"
                             title="어바웃"
@@ -342,7 +342,7 @@
     </article>
     
     
-    <article class="postShorten postShorten--thumbnailimg-right">
+    <article class="postShorten postShorten--thumbnailimg-bottom">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
@@ -374,7 +374,7 @@
 
             </div>
             
-                <div class="postShorten-excerpt">
+                <div class="postShorten-content">
                     <p>우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.</p>
 <hr>
 <h3 id="Step1-도커-파일-만들기"><a href="#Step1-도커-파일-만들기" class="headerlink" title="Step1 도커 파일 만들기"></a>Step1 도커 파일 만들기</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dockerfile</span></span><br><span class="line">FROM ubuntu:18.04</span><br><span class="line"></span><br><span class="line">RUN apt-get update</span><br><span class="line">RUN apt install apache2 -y</span><br><span class="line">ENV APACHE_RUN_USER www-data</span><br><span class="line">ENV APACHE_RUN_GROUP www-data</span><br><span class="line">ENV APACHE_LOG_DIR /var/<span class="built_in">log</span>/apache2</span><br><span class="line">ENV APACHE_PID_FILE /var/run/apache2/apache2.pid </span><br><span class="line"> </span><br><span class="line">EXPOSE 80</span><br><span class="line"> </span><br><span class="line">CMD [<span class="string">"/usr/sbin/apache2ctl"</span>, <span class="string">"-D"</span>, <span class="string">"FOREGROUND"</span>]</span><br></pre></td></tr></table></figure>
@@ -399,15 +399,23 @@
 <hr>
 <h3 id="Step5-컨테이너-접근"><a href="#Step5-컨테이너-접근" class="headerlink" title="Step5 컨테이너 접근"></a>Step5 컨테이너 접근</h3><p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure>
+
+
                     
-                        <a
-                            href="/2020/04/01/2020-04-01-1/"
-                            class="postShorten-excerpt_link link"
-                            aria-label=": 도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행"
-                        >
-                            Continue reading
-                        </a>
                         
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/04/01/2020-04-01-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
                     
                 </div>
             
