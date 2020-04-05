@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-05T14:57:11.096Z</updated>
+  <updated>2020-04-05T14:59:03.602Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="https://sengwoolee.dev/2020/04/05/2020-04-05-1/"/>
     <id>https://sengwoolee.dev/2020/04/05/2020-04-05-1/</id>
     <published>2020-04-05T14:50:57.000Z</published>
-    <updated>2020-04-05T14:57:11.096Z</updated>
+    <updated>2020-04-05T14:59:03.602Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/image/%EC%9B%8C%ED%84%B0%ED%8F%B4%EB%B0%A9%EB%B2%95%EB%A1%A0.png" alt="warterfall"></p><p>현재 가장 많이 사용되고 있는 개발 모델 “워터폴”에 대해 작성한다.</p><p>워터폴은 다음과 같은 순서로 개발이 진행된다. </p><blockquote><p>요구분석 &gt; 설계 &gt; 디자인 &gt; 개발 &gt; 검증</p></blockquote><p>워터폴은 정형화된 방법으로 기술적인 위협 요소가 적다.<br>하지만 각 단계의 진행으로 개발 사이클이 길어질 수 있다.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/image/waterfall_process.png" alt="waterfall"></p><p>현재 가장 많이 사용되고 있는 개발 모델 “워터폴”에 대해 작성한다.</p><p>워터폴은 다음과 같은 순서로 개발이 진행된다. </p><blockquote><p>요구분석 &gt; 설계 &gt; 디자인 &gt; 개발 &gt; 검증</p></blockquote><p>워터폴은 정형화된 방법으로 기술적인 위협 요소가 적다.<br>하지만 각 단계의 진행으로 개발 사이클이 길어질 수 있다.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;/image/%EC%9B%8C%ED%84%B0%ED%8F%B4%EB%B0%A9%EB%B2%95%EB%A1%A0.png&quot; alt=&quot;warterfall&quot;&gt;&lt;/p&gt;
-&lt;p&gt;현재 가장 많이 사용되고 있는 개발 모델 “워터폴”에 대해 작성
+        &lt;p&gt;&lt;img src=&quot;/image/waterfall_process.png&quot; alt=&quot;waterfall&quot;&gt;&lt;/p&gt;
+&lt;p&gt;현재 가장 많이 사용되고 있는 개발 모델 “워터폴”에 대해 작성한다.&lt;/p&gt;
+&lt;p&gt;워터폴은 다음과 같은 순서로 개발이 진행된다. &lt;
       
     
     </summary>
