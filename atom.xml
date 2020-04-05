@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-05T15:23:12.915Z</updated>
+  <updated>2020-04-05T15:29:27.634Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -21,18 +21,17 @@
     <link href="https://sengwoolee.dev/2020/04/05/2020-04-05-1/"/>
     <id>https://sengwoolee.dev/2020/04/05/2020-04-05-1/</id>
     <published>2020-04-05T14:50:57.000Z</published>
-    <updated>2020-04-05T15:23:12.915Z</updated>
+    <updated>2020-04-05T15:29:27.634Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="waterfall_process.png" alt="waterfall"></p><p>현재 가장 많이 사용되고 있는 개발 모델인 “폭포수 모델(waterfall model)”에 대해 작성한다.</p><blockquote><p>요구분석 &gt; 설계 &gt; 디자인 &gt; 개발 &gt; 검증</p></blockquote><p>폭포수 모델은 순차적인 소프트웨어 개발 프로세스로 각 단계를 완료하고 다음 단계로 이어서 진행하는 개발 프로세스를 말한다.</p><p>또한, 소프트웨어 개발에 구조화된 접근 방식을 제공하고<br>각각의 구분된 단계를 순차적으로 진행하여 마일스톤을 잡거나 프로젝트 관리를 할때 용이하다.</p><p>하지만 각 단계를 완료하고 다음 단계로 진행해야 하기 때문에<br>개발 사이클이 길어지고 고객의 요구사항을 반영하기 어렵다는 이슈가 있다.</p><p>따라서 폭포수 모델을 조직의 니즈에 맞게 수정하여 많이 사용한다.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="images/waterfall_process.png" alt="waterfall"></p><p>현재 가장 많이 사용되고 있는 개발 모델인 “폭포수 모델(waterfall model)”에 대해 작성한다.</p><blockquote><p>요구분석 &gt; 설계 &gt; 디자인 &gt; 개발 &gt; 검증</p></blockquote><p>폭포수 모델은 순차적인 소프트웨어 개발 프로세스로 각 단계를 완료하고 다음 단계로 이어서 진행하는 개발 프로세스를 말한다.</p><p>또한, 소프트웨어 개발에 구조화된 접근 방식을 제공하고<br>각각의 구분된 단계를 순차적으로 진행하여 마일스톤을 잡거나 프로젝트 관리를 할때 용이하다.</p><p>하지만 각 단계를 완료하고 다음 단계로 진행해야 하기 때문에<br>개발 사이클이 길어지고 고객의 요구사항을 반영하기 어렵다는 이슈가 있다.</p><p>따라서 폭포수 모델을 조직의 니즈에 맞게 수정하여 많이 사용한다.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;waterfall_process.png&quot; alt=&quot;waterfall&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;images/waterfall_process.png&quot; alt=&quot;waterfall&quot;&gt;&lt;/p&gt;
 &lt;p&gt;현재 가장 많이 사용되고 있는 개발 모델인 “폭포수 모델(waterfall model)”에 대해 작성한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;
+&lt;blockquo
       
     
     </summary>
