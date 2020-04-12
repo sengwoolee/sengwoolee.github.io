@@ -283,6 +283,78 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/03/31/2020-03-29-1/"
+                            aria-label=": 우분투(Ubuntu) 18.04 도커(Docker) 설치"
+                        >
+                            우분투(Ubuntu) 18.04 도커(Docker) 설치
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-03-31T00:55:02+09:00">
+	
+		    Mar 31, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Docker/">Docker</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <p>우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.</p>
+<p>Step 1</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"</span></span><br><span class="line">sudo apt update</span><br><span class="line">apt-cache policy docker-ce</span><br></pre></td></tr></table></figure>
+
+<p>명령어를 입력하게 되면 다음 메시지가 출력됩니다.</p>
+<p>Step 2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker-ce:</span><br><span class="line">  Installed: (none)</span><br></pre></td></tr></table></figure>
+
+<p>Installed none 에서 도커가 설치되지 않았음을 확인할 수 있습니다.<br>다음 명령어로 도커를 설치할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install docker-ce</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 도커가 정상적으로 실행 중인지 확인할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status docker</span><br></pre></td></tr></table></figure>
+
+<p>위 명령어 입력 시 아래와 같은 메시지가 출력됩니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">petrucio@swlee-laptop:~/문서/sengwoolee_devsite$ sudo systemctl status docker</span><br><span class="line">● docker.service - Docker Application Container Engine</span><br><span class="line">   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)</span><br><span class="line">   Active: active (running) since Sun 2020-03-29 14:45:41 KST; 28min ago</span><br><span class="line">     Docs: https://docs.docker.com</span><br><span class="line"> Main PID: 1858 (dockerd)</span><br><span class="line">    Tasks: 13</span><br><span class="line">   CGroup: /system.slice/docker.service</span><br><span class="line">           └─1858 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock</span><br></pre></td></tr></table></figure>
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/03/31/2020-03-29-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/03/31/2020-03-30-1/"
                             aria-label=": 우분투(Ubuntu) 18.04 Docker Container"
                         >
