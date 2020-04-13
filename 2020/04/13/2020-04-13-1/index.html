@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="sengwoolee&#39;s development blog">
-    <title>데이터베이스 - sengwoolee&#39;s development blog</title>
+    <title>2. Node.js 서버 띄우기 - sengwoolee&#39;s development blog</title>
     <meta name="author" content="sengwoolee">
     
     
@@ -15,16 +15,16 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"정보시스템데이터를 통해 정보를 얻어내는 시스템을 말한다.현실세계에서 데이터를 수집하고 데이터를 처리하여 유의미한 정보를 얻어내는 시스템이다.\n데이터 : 현실 세계의 단순한 관찰을 통해 수집된 사실 또는 값정보 : 특정 해석이나 의미를 갖는 데이터\n데이터베이스 시스템데이터를 처리하여 정보를 얻어내는 과정을 도와주는 시스템이다.데이터베이스의 특징은 다음과 같다.\n\n실시간 접근성\n계속적인 변화\n동시 공유성\n운영 가능\n내용 참조\n\nDBMS(Database Management System)데이터베이스를 다루기 위한 시스템을 의미한다.데이터를 정의,조작,제어할 수 있으며 관계형 데이터베이스 관리 시스템에서는 SQL 사용이 가능하다.\nDDL(Data Manipulation Language) : 데이터 정의어DML(Data Definition Language) : 데이터 조작어DCL(Data Control Language) : 데이터 제어어TCL(Transaction Control Language) : 트랜잭션 제어어\n","dateCreated":"2020-04-12T22:54:16+09:00","dateModified":"2020-04-12T23:06:16+09:00","datePublished":"2020-04-12T22:54:16+09:00","description":"","headline":"데이터베이스","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/04/12/2020-04-12-2/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/04/12/2020-04-12-2/"}</script>
-    <meta name="description" content="정보시스템데이터를 통해 정보를 얻어내는 시스템을 말한다.현실세계에서 데이터를 수집하고 데이터를 처리하여 유의미한 정보를 얻어내는 시스템이다. 데이터 : 현실 세계의 단순한 관찰을 통해 수집된 사실 또는 값정보 : 특정 해석이나 의미를 갖는 데이터 데이터베이스 시스템데이터를 처리하여 정보를 얻어내는 과정을 도와주는 시스템이다.데이터베이스의 특징은 다음과 같다">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"node.js 로 서버를 구동하기 위해 express를 사용한다.작업할 폴더에서 터미널을 실행 후 다음 명령어를 입력한다.\n1npm install express\n\nnpm은 node.js package manager의 약자로 node.js의 패키지 관리 프로그램이다.\n추가로 ejs를 설치한다.ejs는 embeded javascript의 약자로 변수를 꺼내어 사용하는 html 탬플릿이다.html 코드 내에 javascript를 사용할 수 있도록 해준다.\n1npm install ejs\n\n작업 폴더 내에 views 폴더를 만들고 view 로 render 할 ejs 파일을 넣어준다.test.ejs를 생성하고 다음과 같이 작성한다.\n12345678&lt;html&gt;    &lt;head&gt;        &lt;title&gt;TEST RENDER PAGE&lt;&#x2F;title&gt;    &lt;&#x2F;head&gt;    &lt;body&gt;        &lt;h1&gt;TEST TEST TEST&lt;&#x2F;h1&gt;    &lt;&#x2F;body&gt;&lt;&#x2F;html&gt;\n\n작업 폴더 루트에 app.js 파일을 생성하고 다음과 같이 작성한다.\n123456789101112131415const express = require(\"express\") // express 모듈 로드const ejs = require(\"ejs\") // ejs 모듈 로드const app = express() // app을 express로 로드app.set(\"view engine\", \"ejs\");app.use(express_static(__dirname +'/'));app.get(\"/\", function(req,res)&#123;    console.log(\"test\") // console 출력    res.render(\"test\", &#123;&#125;);&#125;)app.listen(3000, function()&#123;    console.log(\"localhost:3000 실행중\");&#125;)\n\n프로젝트 루트 폴더에서 다음 명령어로 서버를 구동한다.\n1node app.js\n\nlocalhost:3000 에서 실행된 서버를 확인한다.\n","dateCreated":"2020-04-13T23:29:18+09:00","dateModified":"2020-04-13T23:49:11+09:00","datePublished":"2020-04-13T23:29:18+09:00","description":"","headline":"2. Node.js 서버 띄우기","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/04/13/2020-04-13-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/04/13/2020-04-13-1/"}</script>
+    <meta name="description" content="node.js 로 서버를 구동하기 위해 express를 사용한다.작업할 폴더에서 터미널을 실행 후 다음 명령어를 입력한다. 1npm install express  npm은 node.js package manager의 약자로 node.js의 패키지 관리 프로그램이다. 추가로 ejs를 설치한다.ejs는 embeded javascript의 약자로 변수를 꺼내어">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="데이터베이스">
-<meta property="og:url" content="https://sengwoolee.dev/2020/04/12/2020-04-12-2/index.html">
+<meta property="og:title" content="2. Node.js 서버 띄우기">
+<meta property="og:url" content="https://sengwoolee.dev/2020/04/13/2020-04-13-1/index.html">
 <meta property="og:site_name" content="sengwoolee&#39;s development blog">
-<meta property="og:description" content="정보시스템데이터를 통해 정보를 얻어내는 시스템을 말한다.현실세계에서 데이터를 수집하고 데이터를 처리하여 유의미한 정보를 얻어내는 시스템이다. 데이터 : 현실 세계의 단순한 관찰을 통해 수집된 사실 또는 값정보 : 특정 해석이나 의미를 갖는 데이터 데이터베이스 시스템데이터를 처리하여 정보를 얻어내는 과정을 도와주는 시스템이다.데이터베이스의 특징은 다음과 같다">
+<meta property="og:description" content="node.js 로 서버를 구동하기 위해 express를 사용한다.작업할 폴더에서 터미널을 실행 후 다음 명령어를 입력한다. 1npm install express  npm은 node.js package manager의 약자로 node.js의 패키지 관리 프로그램이다. 추가로 ejs를 설치한다.ejs는 embeded javascript의 약자로 변수를 꺼내어">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-12T13:54:16.000Z">
-<meta property="article:modified_time" content="2020-04-12T14:06:16.379Z">
+<meta property="article:published_time" content="2020-04-13T14:29:18.000Z">
+<meta property="article:modified_time" content="2020-04-13T14:49:11.508Z">
 <meta property="article:author" content="sengwoolee">
 <meta name="twitter:card" content="summary">
     
@@ -282,20 +282,20 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            데이터베이스
+            2. Node.js 서버 띄우기
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2020-04-12T22:54:16+09:00">
+    <time datetime="2020-04-13T23:29:18+09:00">
 	
-		    Apr 12, 2020
+		    Apr 13, 2020
     	
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/Database/">Database</a>
+    <a class="category-link" href="/categories/Node-js/">Node.js</a>
 
 
     
@@ -307,18 +307,23 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <h1 id="정보시스템"><a href="#정보시스템" class="headerlink" title="정보시스템"></a>정보시스템</h1><p>데이터를 통해 정보를 얻어내는 시스템을 말한다.<br>현실세계에서 데이터를 수집하고 데이터를 처리하여 유의미한 정보를 얻어내는 시스템이다.</p>
-<p>데이터 : 현실 세계의 단순한 관찰을 통해 수집된 사실 또는 값<br>정보 : 특정 해석이나 의미를 갖는 데이터</p>
-<h1 id="데이터베이스-시스템"><a href="#데이터베이스-시스템" class="headerlink" title="데이터베이스 시스템"></a>데이터베이스 시스템</h1><p>데이터를 처리하여 정보를 얻어내는 과정을 도와주는 시스템이다.<br>데이터베이스의 특징은 다음과 같다.</p>
-<ol>
-<li>실시간 접근성</li>
-<li>계속적인 변화</li>
-<li>동시 공유성</li>
-<li>운영 가능</li>
-<li>내용 참조</li>
-</ol>
-<h1 id="DBMS-Database-Management-System"><a href="#DBMS-Database-Management-System" class="headerlink" title="DBMS(Database Management System)"></a>DBMS(Database Management System)</h1><p>데이터베이스를 다루기 위한 시스템을 의미한다.<br>데이터를 정의,조작,제어할 수 있으며 관계형 데이터베이스 관리 시스템에서는 SQL 사용이 가능하다.</p>
-<p>DDL(Data Manipulation Language) : 데이터 정의어<br>DML(Data Definition Language) : 데이터 조작어<br>DCL(Data Control Language) : 데이터 제어어<br>TCL(Transaction Control Language) : 트랜잭션 제어어</p>
+            <p>node.js 로 서버를 구동하기 위해 express를 사용한다.<br>작업할 폴더에서 터미널을 실행 후 다음 명령어를 입력한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure>
+
+<p>npm은 node.js package manager의 약자로 node.js의 패키지 관리 프로그램이다.</p>
+<p>추가로 ejs를 설치한다.<br>ejs는 embeded javascript의 약자로 변수를 꺼내어 사용하는 html 탬플릿이다.<br>html 코드 내에 javascript를 사용할 수 있도록 해준다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install ejs</span><br></pre></td></tr></table></figure>
+
+<p>작업 폴더 내에 views 폴더를 만들고 view 로 render 할 ejs 파일을 넣어준다.<br>test.ejs를 생성하고 다음과 같이 작성한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;TEST RENDER PAGE&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;h1&gt;TEST TEST TEST&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>작업 폴더 루트에 app.js 파일을 생성하고 다음과 같이 작성한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>) <span class="comment">// express 모듈 로드</span></span><br><span class="line"><span class="keyword">const</span> ejs = <span class="built_in">require</span>(<span class="string">"ejs"</span>) <span class="comment">// ejs 모듈 로드</span></span><br><span class="line"><span class="keyword">const</span> app = express() <span class="comment">// app을 express로 로드</span></span><br><span class="line"></span><br><span class="line">app.set(<span class="string">"view engine"</span>, <span class="string">"ejs"</span>);</span><br><span class="line">app.use(express_static(__dirname +<span class="string">'/'</span>));</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">"/"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"test"</span>) <span class="comment">// console 출력</span></span><br><span class="line">    res.render(<span class="string">"test"</span>, &#123;&#125;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"localhost:3000 실행중"</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>프로젝트 루트 폴더에서 다음 명령어로 서버를 구동한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure>
+
+<p>localhost:3000 에서 실행된 서버를 확인한다.</p>
 
             
 
@@ -333,14 +338,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/04/13/2020-04-13-1/"
-                    data-tooltip="2. Node.js 서버 띄우기"
-                    aria-label="PREVIOUS: 2. Node.js 서버 띄우기"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -350,9 +352,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/04/12/2020-04-12-1/"
-                    data-tooltip="1. Node.js 소개 및 설치"
-                    aria-label="NEXT: 1. Node.js 소개 및 설치"
+                    href="/2020/04/12/2020-04-12-2/"
+                    data-tooltip="데이터베이스"
+                    aria-label="NEXT: 데이터베이스"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -423,14 +425,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/04/13/2020-04-13-1/"
-                    data-tooltip="2. Node.js 서버 띄우기"
-                    aria-label="PREVIOUS: 2. Node.js 서버 띄우기"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -440,9 +439,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/04/12/2020-04-12-1/"
-                    data-tooltip="1. Node.js 소개 및 설치"
-                    aria-label="NEXT: 1. Node.js 소개 및 설치"
+                    href="/2020/04/12/2020-04-12-2/"
+                    data-tooltip="데이터베이스"
+                    aria-label="NEXT: 데이터베이스"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -551,9 +550,9 @@
     
         <script>
           var disqus_config = function() {
-            this.page.url = 'https://sengwoolee.dev/2020/04/12/2020-04-12-2/';
+            this.page.url = 'https://sengwoolee.dev/2020/04/13/2020-04-13-1/';
               
-            this.page.identifier = '2020/04/12/2020-04-12-2/';
+            this.page.identifier = '2020/04/13/2020-04-13-1/';
               
           };
           (function() {

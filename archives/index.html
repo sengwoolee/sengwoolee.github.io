@@ -283,6 +283,80 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/04/13/2020-04-13-1/"
+                            aria-label=": 2. Node.js 서버 띄우기"
+                        >
+                            2. Node.js 서버 띄우기
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-04-13T23:29:18+09:00">
+	
+		    Apr 13, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Node-js/">Node.js</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <p>node.js 로 서버를 구동하기 위해 express를 사용한다.<br>작업할 폴더에서 터미널을 실행 후 다음 명령어를 입력한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure>
+
+<p>npm은 node.js package manager의 약자로 node.js의 패키지 관리 프로그램이다.</p>
+<p>추가로 ejs를 설치한다.<br>ejs는 embeded javascript의 약자로 변수를 꺼내어 사용하는 html 탬플릿이다.<br>html 코드 내에 javascript를 사용할 수 있도록 해준다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install ejs</span><br></pre></td></tr></table></figure>
+
+<p>작업 폴더 내에 views 폴더를 만들고 view 로 render 할 ejs 파일을 넣어준다.<br>test.ejs를 생성하고 다음과 같이 작성한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;TEST RENDER PAGE&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;h1&gt;TEST TEST TEST&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>작업 폴더 루트에 app.js 파일을 생성하고 다음과 같이 작성한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>) <span class="comment">// express 모듈 로드</span></span><br><span class="line"><span class="keyword">const</span> ejs = <span class="built_in">require</span>(<span class="string">"ejs"</span>) <span class="comment">// ejs 모듈 로드</span></span><br><span class="line"><span class="keyword">const</span> app = express() <span class="comment">// app을 express로 로드</span></span><br><span class="line"></span><br><span class="line">app.set(<span class="string">"view engine"</span>, <span class="string">"ejs"</span>);</span><br><span class="line">app.use(express_static(__dirname +<span class="string">'/'</span>));</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">"/"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"test"</span>) <span class="comment">// console 출력</span></span><br><span class="line">    res.render(<span class="string">"test"</span>, &#123;&#125;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"localhost:3000 실행중"</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>프로젝트 루트 폴더에서 다음 명령어로 서버를 구동한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure>
+
+<p>localhost:3000 에서 실행된 서버를 확인한다.</p>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/04/13/2020-04-13-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/04/12/2020-04-12-2/"
                             aria-label=": 데이터베이스"
                         >
@@ -880,88 +954,6 @@
                         <p>
                             <a
                                 href="/2020/04/01/2020-04-01-2/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2020/04/01/2020-04-01-1/"
-                            aria-label=": 도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행"
-                        >
-                            도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2020-04-01T01:24:40+09:00">
-	
-		    Apr 01, 2020
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/Docker/">Docker</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <p>우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.</p>
-<hr>
-<h3 id="Step1-도커-파일-만들기"><a href="#Step1-도커-파일-만들기" class="headerlink" title="Step1 도커 파일 만들기"></a>Step1 도커 파일 만들기</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dockerfile</span></span><br><span class="line">FROM ubuntu:18.04</span><br><span class="line"></span><br><span class="line">RUN apt-get update</span><br><span class="line">RUN apt install apache2 -y</span><br><span class="line">ENV APACHE_RUN_USER www-data</span><br><span class="line">ENV APACHE_RUN_GROUP www-data</span><br><span class="line">ENV APACHE_LOG_DIR /var/<span class="built_in">log</span>/apache2</span><br><span class="line">ENV APACHE_PID_FILE /var/run/apache2/apache2.pid </span><br><span class="line"> </span><br><span class="line">EXPOSE 80</span><br><span class="line"> </span><br><span class="line">CMD [<span class="string">"/usr/sbin/apache2ctl"</span>, <span class="string">"-D"</span>, <span class="string">"FOREGROUND"</span>]</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>FROM = 기반 이미지 설정<br>RUN = 명령어 실행<br>ENV = 환경 변수</p>
-</blockquote>
-<hr>
-<h3 id="Step2-도커-로그인-및-이미지-빌드"><a href="#Step2-도커-로그인-및-이미지-빌드" class="headerlink" title="Step2 도커 로그인 및 이미지 빌드"></a>Step2 도커 로그인 및 이미지 빌드</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker login</span><br><span class="line">$ docker build -t ubuntutest .</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>-t = tag 태그의 줄임말</p>
-</blockquote>
-<hr>
-<h3 id="Step3-도커-이미지-실행-및-컨테이너-생성"><a href="#Step3-도커-이미지-실행-및-컨테이너-생성" class="headerlink" title="Step3 도커 이미지 실행 및 컨테이너 생성"></a>Step3 도커 이미지 실행 및 컨테이너 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 80:80 ubuntutest</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>-p = 포트를 나타내며 앞 80은 외부 접근 포트번호, 뒤 80은 내부 연결 포트번호</p>
-</blockquote>
-<hr>
-<h3 id="Step4-실행중인-도커-컨테이너-목록-확인"><a href="#Step4-실행중인-도커-컨테이너-목록-확인" class="headerlink" title="Step4 실행중인 도커 컨테이너 목록 확인"></a>Step4 실행중인 도커 컨테이너 목록 확인</h3><p>실행중인 컨테이너 목록을 확인합니다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="Step5-컨테이너-접근"><a href="#Step5-컨테이너-접근" class="headerlink" title="Step5 컨테이너 접근"></a>Step5 컨테이너 접근</h3><p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure>
-
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2020/04/01/2020-04-01-1/#post-footer"
                                 class="postShorten-excerpt_link link"
                                 aria-label=""
                             >

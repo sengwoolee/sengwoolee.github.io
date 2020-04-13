@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-12T14:06:16.379Z</updated>
+  <updated>2020-04-13T14:49:11.508Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2. Node.js 서버 띄우기</title>
+    <link href="https://sengwoolee.dev/2020/04/13/2020-04-13-1/"/>
+    <id>https://sengwoolee.dev/2020/04/13/2020-04-13-1/</id>
+    <published>2020-04-13T14:29:18.000Z</published>
+    <updated>2020-04-13T14:49:11.508Z</updated>
+    
+    <content type="html"><![CDATA[<p>node.js 로 서버를 구동하기 위해 express를 사용한다.<br>작업할 폴더에서 터미널을 실행 후 다음 명령어를 입력한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure><p>npm은 node.js package manager의 약자로 node.js의 패키지 관리 프로그램이다.</p><p>추가로 ejs를 설치한다.<br>ejs는 embeded javascript의 약자로 변수를 꺼내어 사용하는 html 탬플릿이다.<br>html 코드 내에 javascript를 사용할 수 있도록 해준다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install ejs</span><br></pre></td></tr></table></figure><p>작업 폴더 내에 views 폴더를 만들고 view 로 render 할 ejs 파일을 넣어준다.<br>test.ejs를 생성하고 다음과 같이 작성한다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;TEST RENDER PAGE&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;h1&gt;TEST TEST TEST&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure><p>작업 폴더 루트에 app.js 파일을 생성하고 다음과 같이 작성한다.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">"express"</span>) <span class="comment">// express 모듈 로드</span></span><br><span class="line"><span class="keyword">const</span> ejs = <span class="built_in">require</span>(<span class="string">"ejs"</span>) <span class="comment">// ejs 모듈 로드</span></span><br><span class="line"><span class="keyword">const</span> app = express() <span class="comment">// app을 express로 로드</span></span><br><span class="line"></span><br><span class="line">app.set(<span class="string">"view engine"</span>, <span class="string">"ejs"</span>);</span><br><span class="line">app.use(express_static(__dirname +<span class="string">'/'</span>));</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">"/"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"test"</span>) <span class="comment">// console 출력</span></span><br><span class="line">    res.render(<span class="string">"test"</span>, &#123;&#125;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"localhost:3000 실행중"</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>프로젝트 루트 폴더에서 다음 명령어로 서버를 구동한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure><p>localhost:3000 에서 실행된 서버를 확인한다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;node.js 로 서버를 구동하기 위해 express를 사용한다.&lt;br&gt;작업할 폴더에서 터미널을 실행 후 다음 명령어를 입력한다.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="Node.js" scheme="https://sengwoolee.dev/categories/Node-js/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>데이터베이스</title>
