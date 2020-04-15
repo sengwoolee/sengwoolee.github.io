@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-13T14:49:11.508Z</updated>
+  <updated>2020-04-15T14:24:20.645Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>트랜잭션</title>
+    <link href="https://sengwoolee.dev/2020/04/15/2020-04-15-1/"/>
+    <id>https://sengwoolee.dev/2020/04/15/2020-04-15-1/</id>
+    <published>2020-04-15T14:14:46.000Z</published>
+    <updated>2020-04-15T14:24:20.645Z</updated>
+    
+    <content type="html"><![CDATA[<p>트랜잭션(Transaction)은 하나의 논리적 작업 단위로 수행되는 일련의 작업을 말한다.</p><p>트랜잭션은 데이터 일치성과 동시발생을 보장하기 위해 사용한다.<br>트랜잭션 작업 시 영향을 받은 행들은 락처리 되며<br>다른 사용자는 해당 행을 변경할 수 없다.</p><p>트랜잭션 작업 후 커밋시 영향받았던 행들에 대해 락이 해제되며<br>트랜잭션이 완료 처리된다.</p><p>트랜잭션 롤백 시 트랜잭션 생성 이전 시점으로 롤백된다.</p><p>롤백 세그먼트(Rollback Segment)<br>롤백 세그먼트는 수정되기 전의 파일, 블록 ID 등 블럭 정보 및 데이터를 저장한다.</p><p>MSSQL의 경우 BEGIN TRAN 으로 트랜잭션을 시작하고<br>트랜잭션 성공시 COMMIT 하거나 ROLLBACK 할 수 있다.</p><p>트랜잭션이 성공하면 트랜잭션 동안 이루어진 일련의 작업 결과는 커밋되고 데이터베이스의 영구적으로 반영된다.</p><p>트랜잭션에 오류가 발생하여 취소되거나 롤백되면 일련의 작업 내역은 모두 취소된다.</p><p>MSSQL은 기본적으로 자동 커밋을 한다.<br>트랜잭션은 트랜잭션 로그 파일 *.ldf에 저장된다.<br>커밋하면 실제 데이터 파일인 *.mdf에 적용된다.</p><p>커밋/롤백 전까지 데이터에는 락이 걸린다.<br>락 상태에서 select 시도 시 잠금이 발생하여 쿼리가 지연된다.</p><p>BEGIN TRY/END TRY … BEGIN CATCH/END CATCH 등으로<br>TRY-CATCH 와 COMMIT/ROLLBACT 을 같이 사용할 수 있다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;트랜잭션(Transaction)은 하나의 논리적 작업 단위로 수행되는 일련의 작업을 말한다.&lt;/p&gt;
+&lt;p&gt;트랜잭션은 데이터 일치성과 동시발생을 보장하기 위해 사용한다.&lt;br&gt;트랜잭션 작업 시 영향을 받은 행들은 락처리 되며&lt;br&gt;다른 사용자는 해
+      
+    
+    </summary>
+    
+    
+      <category term="Database" scheme="https://sengwoolee.dev/categories/Database/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2. Node.js 서버 띄우기</title>
