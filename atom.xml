@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-15T14:24:20.645Z</updated>
+  <updated>2020-04-16T14:15:24.121Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MSSQL 저장 프로시저(Stored Procedure)</title>
+    <link href="https://sengwoolee.dev/2020/04/16/2020-04-16-1/"/>
+    <id>https://sengwoolee.dev/2020/04/16/2020-04-16-1/</id>
+    <published>2020-04-16T14:03:38.000Z</published>
+    <updated>2020-04-16T14:15:24.121Z</updated>
+    
+    <content type="html"><![CDATA[<p>저장 프로시저(Stored Procedure)는 SQL 서버에서 제공되는 프로그래밍 기능이다.<br>쿼리문의 집합으로 동작을 일괄 처리하는 용도이다.</p><p>정의</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--Transact-SQL Stored Procedure Syntax</span></span><br><span class="line"><span class="keyword">CREATE</span> &#123; PROC | <span class="keyword">PROCEDURE</span> &#125; [schema_name.] procedure_name [ ; number ] </span><br><span class="line">    [ &#123; @parameter [ type_schema_name. ] data_type &#125; </span><br><span class="line">        [ VARYING ] [ = default ] [ OUT | OUTPUT ] [READONLY]</span><br><span class="line">    ] [ ,...n ] </span><br><span class="line">[ <span class="keyword">WITH</span> &lt;procedure_option&gt; [ ,...n ] ]</span><br><span class="line">[ <span class="keyword">FOR</span> <span class="keyword">REPLICATION</span> ] </span><br><span class="line"><span class="keyword">AS</span> &#123; [ <span class="keyword">BEGIN</span> ] sql_statement [;] [ ...n ] [ <span class="keyword">END</span> ] &#125;</span><br><span class="line">[;]</span><br><span class="line"> </span><br><span class="line">&lt;procedure_option&gt; ::= </span><br><span class="line">    [ ENCRYPTION ]</span><br><span class="line">    [ RECOMPILE ]</span><br><span class="line">    [ <span class="keyword">EXECUTE</span> <span class="keyword">AS</span> Clause ]</span><br></pre></td></tr></table></figure><p>수정<br>ALTER PROCEDURE<br>삭제<br>DROP PROCEDURE</p><p>저장된 프로시저 확인</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> o.name, m.definition</span><br><span class="line"><span class="keyword">FROM</span> sys.sql_modules <span class="keyword">AS</span> m</span><br><span class="line"><span class="keyword">JOIN</span> sys.objects <span class="keyword">AS</span> o</span><br><span class="line"><span class="keyword">ON</span> m.object_id = o.object_id <span class="keyword">AND</span> o.type = <span class="string">'P'</span>;</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> sp_helptext usp_error;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;저장 프로시저(Stored Procedure)는 SQL 서버에서 제공되는 프로그래밍 기능이다.&lt;br&gt;쿼리문의 집합으로 동작을 일괄 처리하는 용도이다.&lt;/p&gt;
+&lt;p&gt;정의&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="Database" scheme="https://sengwoolee.dev/categories/Database/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>트랜잭션</title>
