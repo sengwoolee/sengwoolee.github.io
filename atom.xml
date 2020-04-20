@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-19T14:50:13.346Z</updated>
+  <updated>2020-04-20T15:26:18.738Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Index</title>
+    <link href="https://sengwoolee.dev/2020/04/20/2020-04-20-1/"/>
+    <id>https://sengwoolee.dev/2020/04/20/2020-04-20-1/</id>
+    <published>2020-04-20T14:18:34.000Z</published>
+    <updated>2020-04-20T15:26:18.738Z</updated>
+    
+    <content type="html"><![CDATA[<p>Index는 테이블에 저장된 데이터를 빠르게 조회하기 위한 데이터베이스 객체이다.<br>대부분 B-Tress, B+Tree 구조를 가진다.<br>Index는 논리적/물리적으로 테이블과 독립적이다.</p><p>테이블의 레코드는 순서 없이 저장되는데 인덱스가 없는 테이블의 데이터를 찾을 때 무조건 풀스캔을 한다. 데이터의 양이 많을 경우 풀스캔을 하게되면 처리 성능이 떨어진다. 인덱스를 통해 데이터를 빨리 찾고자 사용한다.</p><p>인덱스를 생성할 때는 WHERE 절과 JOIN, ORDER BY 등 키 값의 선별이 가능한 컬럼에 생성한다. 테이블이 자주 갱신될 경우엔 인덱스를 사용하지 않는 것이 좋다.</p><p>인덱스는 클러스터드 인덱스와 논클러스터드 인덱스로 나누어진다. 클러스터드 인덱스는 물리적인 정렬로 데이터를 입력 시 이것을 기준으로 입력된다. 테이블에 하나만 존재할 수 있으며 테이블을 열었을 때 ORDER BY 를 사용하지 않아도 데이터가 클러스터드 인덱싱이 되어있는 것을 확인할 수 있다. 논클러스터드 인덱스는 중복된 값을 가지면 한 테이블에 여러개를 생성할 수 있다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Index는 테이블에 저장된 데이터를 빠르게 조회하기 위한 데이터베이스 객체이다.&lt;br&gt;대부분 B-Tress, B+Tree 구조를 가진다.&lt;br&gt;Index는 논리적/물리적으로 테이블과 독립적이다.&lt;/p&gt;
+&lt;p&gt;테이블의 레코드는 순서 없이 저장되는
+      
+    
+    </summary>
+    
+    
+      <category term="Database" scheme="https://sengwoolee.dev/categories/Database/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>SQL - GROUP BY, HAVING </title>
