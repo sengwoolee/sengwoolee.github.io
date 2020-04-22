@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-20T15:26:18.738Z</updated>
+  <updated>2020-04-22T14:43:34.573Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>컴퓨터 아키텍쳐, 소프트웨어 아키텍쳐</title>
+    <link href="https://sengwoolee.dev/2020/04/22/2020-04-22-1/"/>
+    <id>https://sengwoolee.dev/2020/04/22/2020-04-22-1/</id>
+    <published>2020-04-22T14:15:53.000Z</published>
+    <updated>2020-04-22T14:43:34.573Z</updated>
+    
+    <content type="html"><![CDATA[<p>컴퓨터 아키텍쳐는 컴퓨터 구조로서 컴퓨터 공학의 개념의 살계이며 컴퓨터 시스템의 근간이 되는 운영 구조이다. 컴퓨터의 설계적으로 이식되는 것들과 요구 사항들(특히 속도와 상호 연결)이 무엇인지 기능적으로 설명되어 있는 청사진이다. 주로 중앙처리장치가 메모리 주소에 내부적으로 수행하고 접근하는 방법이 집중적으로 설명된다.</p><p>소프트웨어 아키텍쳐는 소프트웨어 구조로서 소프트웨어의 구성요소들 사이에서 유기적인 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙을 말한다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;컴퓨터 아키텍쳐는 컴퓨터 구조로서 컴퓨터 공학의 개념의 살계이며 컴퓨터 시스템의 근간이 되는 운영 구조이다. 컴퓨터의 설계적으로 이식되는 것들과 요구 사항들(특히 속도와 상호 연결)이 무엇인지 기능적으로 설명되어 있는 청사진이다. 주로 중앙처리장
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Index</title>
