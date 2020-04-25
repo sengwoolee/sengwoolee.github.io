@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-25T13:29:02.299Z</updated>
+  <updated>2020-04-25T13:35:02.728Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>boilerplate</title>
+    <link href="https://sengwoolee.dev/2020/04/25/2020-04-25-2/"/>
+    <id>https://sengwoolee.dev/2020/04/25/2020-04-25-2/</id>
+    <published>2020-04-25T13:30:20.000Z</published>
+    <updated>2020-04-25T13:35:02.728Z</updated>
+    
+    <content type="html"><![CDATA[<p>보일러플레이트(boilerplate)는 변경 없이 재사용할 수 있는 저작품을 의미하며,<br>프로그래밍에서는 상용구 코드를 의미한다.<br>어떤 동작을 수행하기 위해 사전에 작성해야 하는 코드로서<br>자바에서는 클래스의 getter, setter 메소드를 말한다.</p><p>보일러 플레이트의 특징은 다음과 같다.</p><ol><li>최소한의 변경으로 재사용할 수 있는것</li><li>적은 수정만으로 여러 곳에 활용이 가능한 코드, 문구</li><li>각종 문서에서 반복적으로 인용되는 문서의 한 부분</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;보일러플레이트(boilerplate)는 변경 없이 재사용할 수 있는 저작품을 의미하며,&lt;br&gt;프로그래밍에서는 상용구 코드를 의미한다.&lt;br&gt;어떤 동작을 수행하기 위해 사전에 작성해야 하는 코드로서&lt;br&gt;자바에서는 클래스의 getter, sette
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>프레임워크 Express, Koa, Hapi</title>
@@ -483,31 +507,6 @@
         &lt;p&gt;우분투(Ubuntu) 18.04 버전에서 도커(Docker)를 설치합니다.&lt;/p&gt;
 &lt;p&gt;Step 1&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class
-      
-    
-    </summary>
-    
-    
-      <category term="Docker" scheme="https://sengwoolee.dev/categories/Docker/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>우분투(Ubuntu) 18.04 Docker Container</title>
-    <link href="https://sengwoolee.dev/2020/03/31/2020-03-30-1/"/>
-    <id>https://sengwoolee.dev/2020/03/31/2020-03-30-1/</id>
-    <published>2020-03-30T15:30:29.000Z</published>
-    <updated>2020-03-30T16:03:52.917Z</updated>
-    
-    <content type="html"><![CDATA[<p>docker run hello-world </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">root@swlee-laptop:/home/petrucio<span class="comment"># docker run hello-world</span></span><br><span class="line">Unable to find image <span class="string">'hello-world:latest'</span> locally</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">1b930d010525: Pull complete </span><br><span class="line">Digest: sha256:f9dfddf63636d84ef479d645ab5885156ae030f611a56f3a7ac7f2fdd86d7e4e</span><br><span class="line">Status: Downloaded newer image <span class="keyword">for</span> hello-world:latest</span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the <span class="string">"hello-world"</span> image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image <span class="built_in">which</span> runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, <span class="built_in">which</span> sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br><span class="line"></span><br><span class="line">For more examples and ideas, visit:</span><br><span class="line"> https://docs.docker.com/get-started/</span><br></pre></td></tr></table></figure><p>docker run 명령어 실행 과정</p><p>도커는 실행할 이미지가 로컬에 존재하는지 확인하고, 존재하지 않으면 이미지를 다운로드한다.<br>이미지 파일은 도커 허브에서 해당 이미지 파일을 다운로드한다. 다운로드가 끝나면 이미지에서 컨테이너를 생성하고 실행한다.<br>프로그램 파일이 있고 그 프로그램을 실행하면 프로세스가 생기는 것처럼 이미지 파일이 있고 이 이미지를 실행하면 컨테이너가 생성된다.</p><p>docker images 명령어를 실행하면 로컬에 설치된 이미지를 표시한다. 실행하면 다음과 같이 hello-world:latest 이미지가 존재하는 것을 확인할 수 있다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@swlee-laptop:/home/petrucio<span class="comment"># docker images</span></span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">hello-world         latest              fce289e99eb9        15 months ago       1.84kB</span><br></pre></td></tr></table></figure><p>docker container ls -a 명령어로 현재 컨테이너 목록을 확인할 수 있다.<br>docker run 명령어는 실행할 때마다 컨테이너를 생성하므로 docker run hello-world 명령어를 실행한 횟수만큼 컨테이너가 확인된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@swlee-laptop:/home/petrucio<span class="comment"># docker container ls -a</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES</span><br><span class="line">c6582e63e4dd        hello-world         <span class="string">"/hello"</span>            4 minutes ago       Exited (0) 4 minutes ago                       gallant_allen</span><br></pre></td></tr></table></figure><p>컨테이너(Container)</p><p>컨테이너 대한 소개는 <a href="https://www.docker.com/resources/what-container" target="_blank" rel="noopener">https://www.docker.com/resources/what-container</a> 문서를 참고한다. </p><blockquote><p>Containers are an abstraction at the app layer that packages code and dependencies together. Multiple containers can run on the same machine and share the OS kernel with other containers, each running as isolated processes in user space. Containers take up less space than VMs (container images are typically tens of MBs in size), can handle more applications and require fewer VMs and Operating systems.</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;docker run hello-world &lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=
       
     
     </summary>
