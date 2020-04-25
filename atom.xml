@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-22T14:43:34.573Z</updated>
+  <updated>2020-04-25T13:29:02.299Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>프레임워크 Express, Koa, Hapi</title>
+    <link href="https://sengwoolee.dev/2020/04/25/2020-04-25-1/"/>
+    <id>https://sengwoolee.dev/2020/04/25/2020-04-25-1/</id>
+    <published>2020-04-25T13:15:16.000Z</published>
+    <updated>2020-04-25T13:29:02.299Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>Express<br>Node.js 프레임워크 중 커뮤니티가 가장 크다.<br>StrongLoop에 의해 관리되고 있다.<br>내장 라우터로 코드를 쉽게 재사용할 수 있다.</li></ol><p>내장된 에러 핸들링이 없다.<br>다른 프레임워크에 비해 메모리를 많이 차지한다.</p><ol start="2"><li>Koa<br>다른 프레임워크에 비해 미들웨어 작성이 쉽다.<br>기본적으로 뼈대 프레임워크라서 개발자가 필요한 미들웨어만 구성해 사용할 수 있다.<br>ES6 제너레이터를 사용할 수 있다.</li></ol><p>아직 불안정하며 많은 개발이 진행중이다.<br>미들웨어를 직접 작성할 수 있는게 장점이자 단점이다.</p><ol start="3"><li>Hapi<br>코드보다 설정을 더 많이 해야 한다.<br>견고함과 재사용성을 요구하는 큰 규모 팀에서 흔하게 사용된다.<br>월마트랩에서 만들고 이름있는 회사에서 많이 쓰고 있어서 검증되었다고 보는 편이다.</li></ol><p>크고 복잡한 어플리케이션에 특화되어 있다.<br>보일러플레이트로 작성해야 할 코드가 많아서 작은 웹앱에서 쓰기는 불편하고 예제 및 hapi로 작성된 오픈소스 앱도 적다. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;Express&lt;br&gt;Node.js 프레임워크 중 커뮤니티가 가장 크다.&lt;br&gt;StrongLoop에 의해 관리되고 있다.&lt;br&gt;내장 라우터로 코드를 쉽게 재사용할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;내장된 에러 핸들링이 없다.&lt;br&gt;다른
+      
+    
+    </summary>
+    
+    
+      <category term="Node.js" scheme="https://sengwoolee.dev/categories/Node-js/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>컴퓨터 아키텍쳐, 소프트웨어 아키텍쳐</title>
