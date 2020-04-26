@@ -283,6 +283,81 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/04/26/2020-04-26-1/"
+                            aria-label=": 데이터베이스 정규화, 반정규화"
+                        >
+                            데이터베이스 정규화, 반정규화
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-04-26T20:09:57+09:00">
+	
+		    Apr 26, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Database/">Database</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <p>데이터베이스의 정규화, 반정규화에 대해 작성한다.</p>
+<ol>
+<li>정규화<br>정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.</li>
+</ol>
+<p>정규화 단계</p>
+<ul>
+<li>제1정규화<br>중복되는 컬럼을 제거한다.</li>
+<li>제2정규화<br>종속되는 값을 제거한다.</li>
+<li>제3정규화<br>엔티티에 맞는 데이터로 분리한다.</li>
+</ul>
+<ol start="2">
+<li>반정규화(역정규화)<br>정규화로 인해 테이블 수가 증가하면 다수의 조인이 발생함에 따라 성능 저하가 발생할 수 있다.<br>이 문제를 해결하고자 정규화 과정이 모두 마무리된 다음 반정규화를 실시한다.<br>단 테이벌을 합치는 것만이 반정규화는 아니다.</li>
+</ol>
+<ul>
+<li>그룹에 대한 합계 값을 미리 계산하여 테이블에 저장<br>(기존 테이블에 sum 하는것이 아니라 별도의 통계 테이블을 생성)</li>
+<li>하나의 테이블에서 자주 사용되는 레코드와 그렇지 않은 행들을 분리</li>
+<li>자주 조인하여 사용하는 컬럼을 중복제거하여 하나의 테이블로 생성</li>
+</ul>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/04/26/2020-04-26-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/04/25/2020-04-25-2/"
                             aria-label=": boilerplate"
                         >
@@ -869,75 +944,6 @@
                         <p>
                             <a
                                 href="/2020/04/13/2020-04-13-1/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2020/04/12/2020-04-12-2/"
-                            aria-label=": 데이터베이스"
-                        >
-                            데이터베이스
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2020-04-12T22:54:16+09:00">
-	
-		    Apr 12, 2020
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/Database/">Database</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <h1 id="정보시스템"><a href="#정보시스템" class="headerlink" title="정보시스템"></a>정보시스템</h1><p>데이터를 통해 정보를 얻어내는 시스템을 말한다.<br>현실세계에서 데이터를 수집하고 데이터를 처리하여 유의미한 정보를 얻어내는 시스템이다.</p>
-<p>데이터 : 현실 세계의 단순한 관찰을 통해 수집된 사실 또는 값<br>정보 : 특정 해석이나 의미를 갖는 데이터</p>
-<h1 id="데이터베이스-시스템"><a href="#데이터베이스-시스템" class="headerlink" title="데이터베이스 시스템"></a>데이터베이스 시스템</h1><p>데이터를 처리하여 정보를 얻어내는 과정을 도와주는 시스템이다.<br>데이터베이스의 특징은 다음과 같다.</p>
-<ol>
-<li>실시간 접근성</li>
-<li>계속적인 변화</li>
-<li>동시 공유성</li>
-<li>운영 가능</li>
-<li>내용 참조</li>
-</ol>
-<h1 id="DBMS-Database-Management-System"><a href="#DBMS-Database-Management-System" class="headerlink" title="DBMS(Database Management System)"></a>DBMS(Database Management System)</h1><p>데이터베이스를 다루기 위한 시스템을 의미한다.<br>데이터를 정의,조작,제어할 수 있으며 관계형 데이터베이스 관리 시스템에서는 SQL 사용이 가능하다.</p>
-<p>DDL(Data Manipulation Language) : 데이터 정의어<br>DML(Data Definition Language) : 데이터 조작어<br>DCL(Data Control Language) : 데이터 제어어<br>TCL(Transaction Control Language) : 트랜잭션 제어어</p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2020/04/12/2020-04-12-2/#post-footer"
                                 class="postShorten-excerpt_link link"
                                 aria-label=""
                             >
