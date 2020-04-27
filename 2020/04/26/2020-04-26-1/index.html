@@ -15,16 +15,16 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"데이터베이스의 정규화, 반정규화에 대해 작성한다.\n\n정규화정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.\n\n정규화 단계\n\n제1정규화중복되는 컬럼을 제거한다.\n제2정규화종속되는 값을 제거한다.\n제3정규화엔티티에 맞는 데이터로 분리한다.\n\n\n반정규화(역정규화)정규화로 인해 테이블 수가 증가하면 다수의 조인이 발생함에 따라 성능 저하가 발생할 수 있다.이 문제를 해결하고자 정규화 과정이 모두 마무리된 다음 반정규화를 실시한다.단 테이벌을 합치는 것만이 반정규화는 아니다.\n\n\n그룹에 대한 합계 값을 미리 계산하여 테이블에 저장(기존 테이블에 sum 하는것이 아니라 별도의 통계 테이블을 생성)\n하나의 테이블에서 자주 사용되는 레코드와 그렇지 않은 행들을 분리\n자주 조인하여 사용하는 컬럼을 중복제거하여 하나의 테이블로 생성\n\n","dateCreated":"2020-04-26T20:09:57+09:00","dateModified":"2020-04-26T20:15:10+09:00","datePublished":"2020-04-26T20:09:57+09:00","description":"","headline":"데이터베이스 정규화, 반정규화","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/04/26/2020-04-26-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/04/26/2020-04-26-1/"}</script>
-    <meta name="description" content="데이터베이스의 정규화, 반정규화에 대해 작성한다.  정규화정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.  정규화 단계  제1정규화중복되는 컬럼을 제거한다. 제2정규화종속되는 값을 제거한다. 제3정규화엔티티에 맞는 데이터로 분리한다.   반정규화(역정규화)정규화">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"데이터베이스의 정규화, 반정규화에 대해 작성한다.\n\n정규화(Normalization)정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.\n\n정규화 단계-제1정규화중복되는 컬럼을 제거한다.-제2정규화종속되는 값을 제거한다.-제3정규화엔티티에 맞는 데이터로 분리한다.\n\n반정규화(역정규화, Denormalization)정규화로 인해 테이블 수가 증가하면 다수의 조인이 발생함에 따라 성능 저하가 발생할 수 있다.이 문제를 해결하고자 정규화 과정이 모두 마무리된 다음 반정규화를 실시한다.단 테이벌을 합치는 것만이 반정규화는 아니다.\n\n-그룹에 대한 합계 값을 미리 계산하여 테이블에 저장(기존 테이블에 sum 하는것이 아니라 별도의 통계 테이블을 생성)-하나의 테이블에서 자주 사용되는 레코드와 그렇지 않은 행들을 분리-자주 조인하여 사용하는 컬럼을 중복제거하여 하나의 테이블로 생성\n","dateCreated":"2020-04-26T20:09:57+09:00","dateModified":"2020-04-27T22:56:22+09:00","datePublished":"2020-04-26T20:09:57+09:00","description":"","headline":"데이터베이스 정규화, 반정규화","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/04/26/2020-04-26-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/04/26/2020-04-26-1/"}</script>
+    <meta name="description" content="데이터베이스의 정규화, 반정규화에 대해 작성한다.  정규화(Normalization)정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.  정규화 단계-제1정규화중복되는 컬럼을 제거한다.-제2정규화종속되는 값을 제거한다.-제3정규화엔티티에 맞는 데이터로 분리한다.">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="데이터베이스 정규화, 반정규화">
 <meta property="og:url" content="https://sengwoolee.dev/2020/04/26/2020-04-26-1/index.html">
 <meta property="og:site_name" content="sengwoolee&#39;s development blog">
-<meta property="og:description" content="데이터베이스의 정규화, 반정규화에 대해 작성한다.  정규화정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.  정규화 단계  제1정규화중복되는 컬럼을 제거한다. 제2정규화종속되는 값을 제거한다. 제3정규화엔티티에 맞는 데이터로 분리한다.   반정규화(역정규화)정규화">
+<meta property="og:description" content="데이터베이스의 정규화, 반정규화에 대해 작성한다.  정규화(Normalization)정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.  정규화 단계-제1정규화중복되는 컬럼을 제거한다.-제2정규화종속되는 값을 제거한다.-제3정규화엔티티에 맞는 데이터로 분리한다.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-26T11:09:57.000Z">
-<meta property="article:modified_time" content="2020-04-26T11:15:10.851Z">
+<meta property="article:modified_time" content="2020-04-27T13:56:22.535Z">
 <meta property="article:author" content="sengwoolee">
 <meta name="twitter:card" content="summary">
     
@@ -309,22 +309,13 @@
         <div class="main-content-wrap">
             <p>데이터베이스의 정규화, 반정규화에 대해 작성한다.</p>
 <ol>
-<li>정규화<br>정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.</li>
+<li>정규화(Normalization)<br>정규화는 데이터의 중복성을 제거하여 여러 엔티티의 조인이 발생하는 데이터베이스 환경에서 성능을 향상시키기 위한 데이터 구조화 프로세스를 말한다.</li>
 </ol>
-<p>정규화 단계</p>
-<ul>
-<li>제1정규화<br>중복되는 컬럼을 제거한다.</li>
-<li>제2정규화<br>종속되는 값을 제거한다.</li>
-<li>제3정규화<br>엔티티에 맞는 데이터로 분리한다.</li>
-</ul>
+<p>정규화 단계<br>-제1정규화<br>중복되는 컬럼을 제거한다.<br>-제2정규화<br>종속되는 값을 제거한다.<br>-제3정규화<br>엔티티에 맞는 데이터로 분리한다.</p>
 <ol start="2">
-<li>반정규화(역정규화)<br>정규화로 인해 테이블 수가 증가하면 다수의 조인이 발생함에 따라 성능 저하가 발생할 수 있다.<br>이 문제를 해결하고자 정규화 과정이 모두 마무리된 다음 반정규화를 실시한다.<br>단 테이벌을 합치는 것만이 반정규화는 아니다.</li>
+<li>반정규화(역정규화, Denormalization)<br>정규화로 인해 테이블 수가 증가하면 다수의 조인이 발생함에 따라 성능 저하가 발생할 수 있다.<br>이 문제를 해결하고자 정규화 과정이 모두 마무리된 다음 반정규화를 실시한다.<br>단 테이벌을 합치는 것만이 반정규화는 아니다.</li>
 </ol>
-<ul>
-<li>그룹에 대한 합계 값을 미리 계산하여 테이블에 저장<br>(기존 테이블에 sum 하는것이 아니라 별도의 통계 테이블을 생성)</li>
-<li>하나의 테이블에서 자주 사용되는 레코드와 그렇지 않은 행들을 분리</li>
-<li>자주 조인하여 사용하는 컬럼을 중복제거하여 하나의 테이블로 생성</li>
-</ul>
+<p>-그룹에 대한 합계 값을 미리 계산하여 테이블에 저장<br>(기존 테이블에 sum 하는것이 아니라 별도의 통계 테이블을 생성)<br>-하나의 테이블에서 자주 사용되는 레코드와 그렇지 않은 행들을 분리<br>-자주 조인하여 사용하는 컬럼을 중복제거하여 하나의 테이블로 생성</p>
 
             
 
