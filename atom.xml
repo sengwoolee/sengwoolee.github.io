@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-04-27T13:56:22.535Z</updated>
+  <updated>2020-05-01T14:01:23.075Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IaaS, PaaS, SaaS</title>
+    <link href="https://sengwoolee.dev/2020/04/28/2020-04-28-1/"/>
+    <id>https://sengwoolee.dev/2020/04/28/2020-04-28-1/</id>
+    <published>2020-04-28T14:29:33.000Z</published>
+    <updated>2020-05-01T14:01:23.075Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="IaaS-Infrastructure-as-a-Service"><a href="#IaaS-Infrastructure-as-a-Service" class="headerlink" title="IaaS(Infrastructure as a Service)"></a>IaaS(Infrastructure as a Service)</h2><p>서버를 운영하기 위해서 필요한 서버 자원, IP, 네트워크, 스토리지, 전력 등등 을 가상의 환경에서 쉽고 편하게 사용할 수 있도록 서비스 형태로 제공한다. 기존 서버 호스팅보다 하드웨어 확장성이 좋고 탄력적이며 빠른 제공을 할 수 있는 가상화 기술을 이용한다. Pass와 Saas의 기반이 된다.</p><h2 id="PaaS-Platform-as-a-Service"><a href="#PaaS-Platform-as-a-Service" class="headerlink" title="PaaS(Platform as a Service)"></a>PaaS(Platform as a Service)</h2><p>IaaS를 기본으로 개발툴과 기능, 애플리케이션 배포 등 개발환경에 부가적인 서비스를 안전하게 제공하는 것이다. 미들웨어와 데이터베이스 관리, 애널리틱스 혹은 운영체제 등이 포함된다. 개발자가 애플리케이션을 개발하고 배포하는데 필요한 모든 것들을 제공해야 한다. PaaS를 이용하면 개발자는 기반 인프라스트럭처를 프로비저닝할 필요가 없다.</p><h2 id="SaaS-Software-as-a-Service"><a href="#SaaS-Software-as-a-Service" class="headerlink" title="SaaS(Software as a Service)"></a>SaaS(Software as a Service)</h2><p>서드파티가 호스팅 방식으로 소프트웨어를 제공하는 것이다. 사용자는 내부 구성을 관리할 필요가 없다. 이메일이나 CRM 소프트웨어 등에서 널리 사용된다.<br>머신 혹은 서버를 기준으로 소프트웨어 라이선스를 구매해 직접 사용하던 기존의 구매 방식과 차별화된 서비스를 제공한다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;IaaS-Infrastructure-as-a-Service&quot;&gt;&lt;a href=&quot;#IaaS-Infrastructure-as-a-Service&quot; class=&quot;headerlink&quot; title=&quot;IaaS(Infrastructure as a Ser
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>데이터베이스 정규화, 반정규화</title>
@@ -481,32 +505,6 @@
       
         &lt;p&gt;컨테이너 아이디를 입력해서 bash 에 접근합니다.&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="Docker" scheme="https://sengwoolee.dev/categories/Docker/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>도커(Docker) Ubuntu, Apache2 이미지 생성 및 실행</title>
-    <link href="https://sengwoolee.dev/2020/04/01/2020-04-01-1/"/>
-    <id>https://sengwoolee.dev/2020/04/01/2020-04-01-1/</id>
-    <published>2020-03-31T16:24:40.000Z</published>
-    <updated>2020-04-03T16:27:14.433Z</updated>
-    
-    <content type="html"><![CDATA[<p>우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.</p><hr><h3 id="Step1-도커-파일-만들기"><a href="#Step1-도커-파일-만들기" class="headerlink" title="Step1 도커 파일 만들기"></a>Step1 도커 파일 만들기</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dockerfile</span></span><br><span class="line">FROM ubuntu:18.04</span><br><span class="line"></span><br><span class="line">RUN apt-get update</span><br><span class="line">RUN apt install apache2 -y</span><br><span class="line">ENV APACHE_RUN_USER www-data</span><br><span class="line">ENV APACHE_RUN_GROUP www-data</span><br><span class="line">ENV APACHE_LOG_DIR /var/<span class="built_in">log</span>/apache2</span><br><span class="line">ENV APACHE_PID_FILE /var/run/apache2/apache2.pid </span><br><span class="line"> </span><br><span class="line">EXPOSE 80</span><br><span class="line"> </span><br><span class="line">CMD [<span class="string">"/usr/sbin/apache2ctl"</span>, <span class="string">"-D"</span>, <span class="string">"FOREGROUND"</span>]</span><br></pre></td></tr></table></figure><blockquote><p>FROM = 기반 이미지 설정<br>RUN = 명령어 실행<br>ENV = 환경 변수</p></blockquote><hr><h3 id="Step2-도커-로그인-및-이미지-빌드"><a href="#Step2-도커-로그인-및-이미지-빌드" class="headerlink" title="Step2 도커 로그인 및 이미지 빌드"></a>Step2 도커 로그인 및 이미지 빌드</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker login</span><br><span class="line">$ docker build -t ubuntutest .</span><br></pre></td></tr></table></figure><blockquote><p>-t = tag 태그의 줄임말</p></blockquote><hr><h3 id="Step3-도커-이미지-실행-및-컨테이너-생성"><a href="#Step3-도커-이미지-실행-및-컨테이너-생성" class="headerlink" title="Step3 도커 이미지 실행 및 컨테이너 생성"></a>Step3 도커 이미지 실행 및 컨테이너 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 80:80 ubuntutest</span><br></pre></td></tr></table></figure><blockquote><p>-p = 포트를 나타내며 앞 80은 외부 접근 포트번호, 뒤 80은 내부 연결 포트번호</p></blockquote><hr><h3 id="Step4-실행중인-도커-컨테이너-목록-확인"><a href="#Step4-실행중인-도커-컨테이너-목록-확인" class="headerlink" title="Step4 실행중인 도커 컨테이너 목록 확인"></a>Step4 실행중인 도커 컨테이너 목록 확인</h3><p>실행중인 컨테이너 목록을 확인합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls</span><br></pre></td></tr></table></figure><hr><h3 id="Step5-컨테이너-접근"><a href="#Step5-컨테이너-접근" class="headerlink" title="Step5 컨테이너 접근"></a>Step5 컨테이너 접근</h3><p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;우분투 18.04 버전 이미지를 기반으로 아파치를 설치하는 도커 이미지를 빌드하고 실행합니다.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;Step1-도커-파일-만들기&quot;&gt;&lt;a href=&quot;#Step1-도커-파일-만들기&quot; class=&quot;headerlink&quot; titl
       
     
     </summary>
