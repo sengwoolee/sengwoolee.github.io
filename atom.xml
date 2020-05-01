@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-01T14:01:23.075Z</updated>
+  <updated>2020-05-01T14:13:59.615Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu Errors were encountered while processing 해결</title>
+    <link href="https://sengwoolee.dev/2020/05/01/2020-05-01-1/"/>
+    <id>https://sengwoolee.dev/2020/05/01/2020-05-01-1/</id>
+    <published>2020-05-01T14:11:49.000Z</published>
+    <updated>2020-05-01T14:13:59.615Z</updated>
+    
+    <content type="html"><![CDATA[<p>dpkg 기록 삭제</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/lib/dpkg/info/*</span><br></pre></td></tr></table></figure><p>dpkg 재설정</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg --configure<span class="_">-a</span></span><br></pre></td></tr></table></figure><p>업데이트</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;dpkg 기록 삭제&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;cod
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>IaaS, PaaS, SaaS</title>
@@ -486,31 +511,6 @@
     
     
       <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>도커(Docker) 컨테이너 내 php 설치</title>
-    <link href="https://sengwoolee.dev/2020/04/01/2020-04-01-2/"/>
-    <id>https://sengwoolee.dev/2020/04/01/2020-04-01-2/</id>
-    <published>2020-04-01T14:21:56.000Z</published>
-    <updated>2020-04-03T16:27:07.800Z</updated>
-    
-    <content type="html"><![CDATA[<p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure><p>아래 작업은 root 권한으로 작업합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">$ apt install php</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 코어</span></span><br><span class="line">$ apt install php7.3 php7.3-common php7.3-cli</span><br><span class="line"><span class="comment"># 익스텐션</span></span><br><span class="line">$ apt install php7.2-bcmath php7.2-bz2 php7.2-curl php7.2-gd php7.2-intl php7.2-json php7.2-mbstring php7.2-readline php7.2-xml php7.2-zip</span><br><span class="line"><span class="comment"># 아파치 연동 모델</span></span><br><span class="line">$ apt install libapache2-mod-php7.2 </span><br><span class="line"><span class="comment"># 편집기 vim</span></span><br><span class="line">$ apt install vim</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 버전 확인</span></span><br><span class="line">$ php -v</span><br></pre></td></tr></table></figure><p>php 설치가 완료되었습니다. </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;컨테이너 아이디를 입력해서 bash 에 접근합니다.&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="Docker" scheme="https://sengwoolee.dev/categories/Docker/"/>
     
     
   </entry>

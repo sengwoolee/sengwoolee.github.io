@@ -283,6 +283,74 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/04/15/2020-04-15-1/"
+                            aria-label=": 트랜잭션"
+                        >
+                            트랜잭션
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-04-15T23:14:46+09:00">
+	
+		    Apr 15, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Database/">Database</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <p>트랜잭션(Transaction)은 하나의 논리적 작업 단위로 수행되는 일련의 작업을 말한다.</p>
+<p>트랜잭션은 데이터 일치성과 동시발생을 보장하기 위해 사용한다.<br>트랜잭션 작업 시 영향을 받은 행들은 락처리 되며<br>다른 사용자는 해당 행을 변경할 수 없다.</p>
+<p>트랜잭션 작업 후 커밋시 영향받았던 행들에 대해 락이 해제되며<br>트랜잭션이 완료 처리된다.</p>
+<p>트랜잭션 롤백 시 트랜잭션 생성 이전 시점으로 롤백된다.</p>
+<p>롤백 세그먼트(Rollback Segment)<br>롤백 세그먼트는 수정되기 전의 파일, 블록 ID 등 블럭 정보 및 데이터를 저장한다.</p>
+<p>MSSQL의 경우 BEGIN TRAN 으로 트랜잭션을 시작하고<br>트랜잭션 성공시 COMMIT 하거나 ROLLBACK 할 수 있다.</p>
+<p>트랜잭션이 성공하면 트랜잭션 동안 이루어진 일련의 작업 결과는 커밋되고 데이터베이스의 영구적으로 반영된다.</p>
+<p>트랜잭션에 오류가 발생하여 취소되거나 롤백되면 일련의 작업 내역은 모두 취소된다.</p>
+<p>MSSQL은 기본적으로 자동 커밋을 한다.<br>트랜잭션은 트랜잭션 로그 파일 *.ldf에 저장된다.<br>커밋하면 실제 데이터 파일인 *.mdf에 적용된다.</p>
+<p>커밋/롤백 전까지 데이터에는 락이 걸린다.<br>락 상태에서 select 시도 시 잠금이 발생하여 쿼리가 지연된다.</p>
+<p>BEGIN TRY/END TRY … BEGIN CATCH/END CATCH 등으로<br>TRY-CATCH 와 COMMIT/ROLLBACT 을 같이 사용할 수 있다.</p>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/04/15/2020-04-15-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/04/13/2020-04-13-1/"
                             aria-label=": 2. Node.js 서버 띄우기"
                         >
@@ -886,74 +954,6 @@
                         <p>
                             <a
                                 href="/2020/04/03/2020-04-03-1/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2020/04/01/2020-04-01-2/"
-                            aria-label=": 도커(Docker) 컨테이너 내 php 설치"
-                        >
-                            도커(Docker) 컨테이너 내 php 설치
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2020-04-01T23:21:56+09:00">
-	
-		    Apr 01, 2020
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/Docker/">Docker</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <p>컨테이너 아이디를 입력해서 bash 에 접근합니다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker <span class="built_in">exec</span> -it 9531b /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>아래 작업은 root 권한으로 작업합니다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">$ apt install php</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 코어</span></span><br><span class="line">$ apt install php7.3 php7.3-common php7.3-cli</span><br><span class="line"><span class="comment"># 익스텐션</span></span><br><span class="line">$ apt install php7.2-bcmath php7.2-bz2 php7.2-curl php7.2-gd php7.2-intl php7.2-json php7.2-mbstring php7.2-readline php7.2-xml php7.2-zip</span><br><span class="line"><span class="comment"># 아파치 연동 모델</span></span><br><span class="line">$ apt install libapache2-mod-php7.2 </span><br><span class="line"><span class="comment"># 편집기 vim</span></span><br><span class="line">$ apt install vim</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># php 버전 확인</span></span><br><span class="line">$ php -v</span><br></pre></td></tr></table></figure>
-
-<p>php 설치가 완료되었습니다. </p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2020/04/01/2020-04-01-2/#post-footer"
                                 class="postShorten-excerpt_link link"
                                 aria-label=""
                             >
