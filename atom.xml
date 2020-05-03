@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-01T14:13:59.615Z</updated>
+  <updated>2020-05-03T14:20:25.079Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)</title>
+    <link href="https://sengwoolee.dev/2020/05/02/2020-05-04-1/"/>
+    <id>https://sengwoolee.dev/2020/05/02/2020-05-04-1/</id>
+    <published>2020-05-02T08:37:29.000Z</published>
+    <updated>2020-05-03T14:20:25.079Z</updated>
+    
+    <content type="html"><![CDATA[<p>환경 : CentOS7 / Apache</p><p>EPEL 저장소 활성화 및 apache용 certbot 설치</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br><span class="line">yum install certbot python2-certbot-apache</span><br></pre></td></tr></table></figure><p>certbot에서 apache를 기반으로 자동구성</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache</span><br></pre></td></tr></table></figure><p>certbot에서 apache를 수동으로 구성</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache certonly</span><br></pre></td></tr></table></figure><p>certbot을 설정하여 구성 완료 후 문제가 없을 경우 아래 메시지가 출력된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- Congratulations! Your certificate and chain have been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/fullchain.pem</span><br><span class="line">Your key file has been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/privkey.pem</span><br></pre></td></tr></table></figure><p>apache 서비스 재시작</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure><p>certbot 인증서 자동 갱신 테스트</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot renew --dry-run</span><br></pre></td></tr></table></figure><p>자동갱신 추가</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><blockquote><p>0       0,12    *       *       *       python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; certbot renew</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;환경 : CentOS7 / Apache&lt;/p&gt;
+&lt;p&gt;EPEL 저장소 활성화 및 apache용 certbot 설치&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
+      
+    
+    </summary>
+    
+    
+      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Ubuntu Errors were encountered while processing 해결</title>
@@ -487,31 +513,6 @@
     
     
       <category term="Introduce" scheme="https://sengwoolee.dev/tags/Introduce/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>소프트웨어 개발 환경 - local, dev, integration, qa, stage, production</title>
-    <link href="https://sengwoolee.dev/2020/04/03/2020-04-03-1/"/>
-    <id>https://sengwoolee.dev/2020/04/03/2020-04-03-1/</id>
-    <published>2020-04-03T14:35:34.000Z</published>
-    <updated>2020-04-03T16:27:10.089Z</updated>
-    
-    <content type="html"><![CDATA[<p>일반적으로 사용되는 소프트웨어 개발 환경에 대해 작성한다.<br>프로젝트 진행에 있어 모든 환경을 갖출 필요는 없으며 프로젝트 환경에 따라서 각 환경을 합치거나 생략해도 된다.</p><h3 id="로컬-Local"><a href="#로컬-Local" class="headerlink" title="로컬 (Local)"></a>로컬 (Local)</h3><p>각 개발 PC 에 개발 및 테스트 환경 및 서버를 셋업한 환경을 말한다.<br>로컬 서버 환경에서의 개발에서 주의할 부분은 모든 개발자가 같은 개발 환경을 사용해야 한다는 것이다.<br>서로 다른 개발 환경에서 작업한 코드를 머지할 때 로컬 환경에서 잘 작동했던 코드가 작동하지 않는 경우가 많다.<br>전체 개발 환경을 zip 파일 형태로 묶어서 사용하거나 Docker 등의 컨테이너 기술을 사용한다. </p><h3 id="개발-Dev"><a href="#개발-Dev" class="headerlink" title="개발 (Dev)"></a>개발 (Dev)</h3><p>개발자들이 작업한 코드를 머지하여 테스트를 진행할 수 있는 환경이다.<br>소스코드를 형상관리 시스템에 커밋하면 코드는 개발 서버에 배포되고 이 환경에서 개발 테스트(단위 테스트 등)를 진행한다.</p><h3 id="통합-개발-Integration"><a href="#통합-개발-Integration" class="headerlink" title="통합 개발 (Integration)"></a>통합 개발 (Integration)</h3><p>컴포넌트가 의존성을 가지고 있을 경우 컴포넌트를 통합 및 테스트 하는 환경으로 사용한다.<br>최소한으로 구성하고 개발 환경에서 릴리즈가 되면 주기적으로 통합 개발 환경에 배포한다.</p><h3 id="테스트-QA"><a href="#테스트-QA" class="headerlink" title="테스트 (QA)"></a>테스트 (QA)</h3><p>QA 엔지니어가 기능 및 비기능 테스트 등을 수행하는 환경이다.<br>테스트를 수행할 때 라이브 환경과 유사한 환경을 만들고 테스트를 수행한다. </p><h3 id="스테이지-Stage"><a href="#스테이지-Stage" class="headerlink" title="스테이지 (Stage)"></a>스테이지 (Stage)</h3><p>라이브 환경과 거의 동일한 환경을 만들고 라이브 릴리즈 전 최종적으로 비기능적인 부분들의 테스트를 수행하는 환경이다. </p><h3 id="프로덕션-라이브-Production-Live"><a href="#프로덕션-라이브-Production-Live" class="headerlink" title="프로덕션/라이브 (Production/Live)"></a>프로덕션/라이브 (Production/Live)</h3><p>실제 서비스를 진행하는 환경이다.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;일반적으로 사용되는 소프트웨어 개발 환경에 대해 작성한다.&lt;br&gt;프로젝트 진행에 있어 모든 환경을 갖출 필요는 없으며 프로젝트 환경에 따라서 각 환경을 합치거나 생략해도 된다.&lt;/p&gt;
-&lt;h3 id=&quot;로컬-Local&quot;&gt;&lt;a href=&quot;#로컬-Loc
-      
-    
-    </summary>
-    
-    
-      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
-    
     
   </entry>
   

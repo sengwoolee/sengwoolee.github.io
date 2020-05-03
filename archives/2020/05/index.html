@@ -283,6 +283,87 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/05/02/2020-05-04-1/"
+                            aria-label=": CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)"
+                        >
+                            CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-05-02T17:37:29+09:00">
+	
+		    May 02, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Development/">Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <p>환경 : CentOS7 / Apache</p>
+<p>EPEL 저장소 활성화 및 apache용 certbot 설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br><span class="line">yum install certbot python2-certbot-apache</span><br></pre></td></tr></table></figure>
+
+<p>certbot에서 apache를 기반으로 자동구성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache</span><br></pre></td></tr></table></figure>
+
+<p>certbot에서 apache를 수동으로 구성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache certonly</span><br></pre></td></tr></table></figure>
+
+<p>certbot을 설정하여 구성 완료 후 문제가 없을 경우 아래 메시지가 출력된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- Congratulations! Your certificate and chain have been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/fullchain.pem</span><br><span class="line">Your key file has been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/privkey.pem</span><br></pre></td></tr></table></figure>
+
+<p>apache 서비스 재시작</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
+
+<p>certbot 인증서 자동 갱신 테스트</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot renew --dry-run</span><br></pre></td></tr></table></figure>
+
+<p>자동갱신 추가</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>0       0,12    *       *       *       python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; certbot renew</p>
+</blockquote>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/05/02/2020-05-04-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/05/01/2020-05-01-1/"
                             aria-label=": Ubuntu Errors were encountered while processing 해결"
                         >

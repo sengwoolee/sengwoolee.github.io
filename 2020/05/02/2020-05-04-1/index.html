@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="sengwoolee&#39;s development blog">
-    <title>Ubuntu Errors were encountered while processing 해결 - sengwoolee&#39;s development blog</title>
+    <title>CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt) - sengwoolee&#39;s development blog</title>
     <meta name="author" content="sengwoolee">
     
     
@@ -15,16 +15,16 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"dpkg 기록 삭제\n1sudo rm /var/lib/dpkg/info/*\n\ndpkg 재설정\n1sudo dpkg --configure-a\n\n업데이트\n1apt-get update\n\n\n","dateCreated":"2020-05-01T23:11:49+09:00","dateModified":"2020-05-01T23:13:59+09:00","datePublished":"2020-05-01T23:11:49+09:00","description":"","headline":"Ubuntu Errors were encountered while processing 해결","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/05/01/2020-05-01-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/05/01/2020-05-01-1/"}</script>
-    <meta name="description" content="dpkg 기록 삭제 1sudo rm &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info&#x2F;*  dpkg 재설정 1sudo dpkg --configure-a  업데이트 1apt-get update">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"환경 : CentOS7 / Apache\nEPEL 저장소 활성화 및 apache용 certbot 설치\n12yum install epel-releaseyum install certbot python2-certbot-apache\n\ncertbot에서 apache를 기반으로 자동구성\n1certbot --apache\n\ncertbot에서 apache를 수동으로 구성\n1certbot --apache certonly\n\ncertbot을 설정하여 구성 완료 후 문제가 없을 경우 아래 메시지가 출력된다.\n1234- Congratulations! Your certificate and chain have been saved at:/etc/letsencrypt/live/sengwoolee.dev/fullchain.pemYour key file has been saved at:/etc/letsencrypt/live/sengwoolee.dev/privkey.pem\n\napache 서비스 재시작\n1systemctl restart httpd\n\ncertbot 인증서 자동 갱신 테스트\n1certbot renew --dry-run\n\n자동갱신 추가\n1crontab -e\n\n0       0,12    *       *       *       python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; certbot renew\n\n","dateCreated":"2020-05-02T17:37:29+09:00","dateModified":"2020-05-03T23:20:25+09:00","datePublished":"2020-05-02T17:37:29+09:00","description":"","headline":"CentOS7 Apache SSL인증서 적용 (Certbot, Let's encrypt)","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/05/02/2020-05-04-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/05/02/2020-05-04-1/"}</script>
+    <meta name="description" content="환경 : CentOS7 &#x2F; Apache EPEL 저장소 활성화 및 apache용 certbot 설치 12yum install epel-releaseyum install certbot python2-certbot-apache  certbot에서 apache를 기반으로 자동구성 1certbot --apache  certbot에서 apache를 수동으로 구성 1">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Ubuntu Errors were encountered while processing 해결">
-<meta property="og:url" content="https://sengwoolee.dev/2020/05/01/2020-05-01-1/index.html">
+<meta property="og:title" content="CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)">
+<meta property="og:url" content="https://sengwoolee.dev/2020/05/02/2020-05-04-1/index.html">
 <meta property="og:site_name" content="sengwoolee&#39;s development blog">
-<meta property="og:description" content="dpkg 기록 삭제 1sudo rm &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info&#x2F;*  dpkg 재설정 1sudo dpkg --configure-a  업데이트 1apt-get update">
+<meta property="og:description" content="환경 : CentOS7 &#x2F; Apache EPEL 저장소 활성화 및 apache용 certbot 설치 12yum install epel-releaseyum install certbot python2-certbot-apache  certbot에서 apache를 기반으로 자동구성 1certbot --apache  certbot에서 apache를 수동으로 구성 1">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-01T14:11:49.000Z">
-<meta property="article:modified_time" content="2020-05-01T14:13:59.615Z">
+<meta property="article:published_time" content="2020-05-02T08:37:29.000Z">
+<meta property="article:modified_time" content="2020-05-03T14:20:25.079Z">
 <meta property="article:author" content="sengwoolee">
 <meta name="twitter:card" content="summary">
     
@@ -282,14 +282,14 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            Ubuntu Errors were encountered while processing 해결
+            CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2020-05-01T23:11:49+09:00">
+    <time datetime="2020-05-02T17:37:29+09:00">
 	
-		    May 01, 2020
+		    May 02, 2020
     	
     </time>
     
@@ -307,16 +307,30 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>dpkg 기록 삭제</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/lib/dpkg/info/*</span><br></pre></td></tr></table></figure>
+            <p>환경 : CentOS7 / Apache</p>
+<p>EPEL 저장소 활성화 및 apache용 certbot 설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br><span class="line">yum install certbot python2-certbot-apache</span><br></pre></td></tr></table></figure>
 
-<p>dpkg 재설정</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg --configure<span class="_">-a</span></span><br></pre></td></tr></table></figure>
+<p>certbot에서 apache를 기반으로 자동구성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache</span><br></pre></td></tr></table></figure>
 
-<p>업데이트</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+<p>certbot에서 apache를 수동으로 구성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache certonly</span><br></pre></td></tr></table></figure>
 
+<p>certbot을 설정하여 구성 완료 후 문제가 없을 경우 아래 메시지가 출력된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- Congratulations! Your certificate and chain have been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/fullchain.pem</span><br><span class="line">Your key file has been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/privkey.pem</span><br></pre></td></tr></table></figure>
 
+<p>apache 서비스 재시작</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
+
+<p>certbot 인증서 자동 갱신 테스트</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot renew --dry-run</span><br></pre></td></tr></table></figure>
+
+<p>자동갱신 추가</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>0       0,12    *       *       *       python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; certbot renew</p>
+</blockquote>
 
             
 
@@ -331,14 +345,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/02/2020-05-04-1/"
-                    data-tooltip="CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)"
-                    aria-label="PREVIOUS: CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -348,9 +359,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/04/28/2020-04-28-1/"
-                    data-tooltip="IaaS, PaaS, SaaS"
-                    aria-label="NEXT: IaaS, PaaS, SaaS"
+                    href="/2020/05/01/2020-05-01-1/"
+                    data-tooltip="Ubuntu Errors were encountered while processing 해결"
+                    aria-label="NEXT: Ubuntu Errors were encountered while processing 해결"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -421,14 +432,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/02/2020-05-04-1/"
-                    data-tooltip="CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)"
-                    aria-label="PREVIOUS: CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -438,9 +446,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/04/28/2020-04-28-1/"
-                    data-tooltip="IaaS, PaaS, SaaS"
-                    aria-label="NEXT: IaaS, PaaS, SaaS"
+                    href="/2020/05/01/2020-05-01-1/"
+                    data-tooltip="Ubuntu Errors were encountered while processing 해결"
+                    aria-label="NEXT: Ubuntu Errors were encountered while processing 해결"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -549,9 +557,9 @@
     
         <script>
           var disqus_config = function() {
-            this.page.url = 'https://sengwoolee.dev/2020/05/01/2020-05-01-1/';
+            this.page.url = 'https://sengwoolee.dev/2020/05/02/2020-05-04-1/';
               
-            this.page.identifier = '2020/05/01/2020-05-01-1/';
+            this.page.identifier = '2020/05/02/2020-05-04-1/';
               
           };
           (function() {
