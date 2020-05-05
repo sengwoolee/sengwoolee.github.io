@@ -328,9 +328,7 @@
 
 <p>자동갱신 추가</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>0       0,12    *       *       *       python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; certbot renew</p>
-</blockquote>
+<p>아래 내용 작성 후 저장<br>0       0,12    *       *       *       python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; certbot renew</p>
 
                     
                         
