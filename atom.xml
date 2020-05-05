@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-05T12:22:47.588Z</updated>
+  <updated>2020-05-05T12:44:58.700Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>소프트웨어 아키텍처 패턴 - 계층화 패턴(Layered Pattern)</title>
+    <link href="https://sengwoolee.dev/2020/05/05/2020-05-05-2/"/>
+    <id>https://sengwoolee.dev/2020/05/05/2020-05-05-2/</id>
+    <published>2020-05-05T12:39:55.000Z</published>
+    <updated>2020-05-05T12:44:58.700Z</updated>
+    
+    <content type="html"><![CDATA[<p>이 패턴은 n-티어 아키텍처 패턴이라고도 불린다. 이는 하위 모듈들의 그룹으로 나눌 수 있는 구조화된 프로그램에서 사용할 수 있다. 각 하위 모듈들은 특정한 수준의 추상화를 제공한다. 각 계층은 다음 상위 계층에 서비스를 제공한다. </p><p>일반적인 정보 시스템에서 공통적으로 볼 수 있는 계층 4가지는 다음과 같다.</p><ol><li>프레젠테이션 계층(Presentation Layer) / UI 계층(UI Layer)</li><li>애플리케이션 계층(Application Layer) / 서비스 계층(Service Layer)</li><li>비즈니스 논리 계층(Business Logic Layer) / 도메인 계층(Domain Layer)</li><li>데이터 접근 계층(Data Access Layer) / 영속 계층 (Persistence Layer)</li></ol><p>활용</p><ol><li>일반적인 데스크톱 애플리케이션</li><li>E-Commerce 웹 애플리케이션</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;이 패턴은 n-티어 아키텍처 패턴이라고도 불린다. 이는 하위 모듈들의 그룹으로 나눌 수 있는 구조화된 프로그램에서 사용할 수 있다. 각 하위 모듈들은 특정한 수준의 추상화를 제공한다. 각 계층은 다음 상위 계층에 서비스를 제공한다. &lt;/p&gt;
+&lt;p
+      
+    
+    </summary>
+    
+    
+      <category term="Software Engineering" scheme="https://sengwoolee.dev/categories/Software-Engineering/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>소프트웨어 아키텍처</title>
+    <link href="https://sengwoolee.dev/2020/05/05/2020-05-05-1/"/>
+    <id>https://sengwoolee.dev/2020/05/05/2020-05-05-1/</id>
+    <published>2020-05-05T12:32:23.000Z</published>
+    <updated>2020-05-05T12:38:43.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>SW 컴포넌트 사이의 상호관계를 설계하고 정의한 시스템 구조이다.</p><h3 id="소프트웨어-아키텍처의-특징"><a href="#소프트웨어-아키텍처의-특징" class="headerlink" title="소프트웨어 아키텍처의 특징"></a>소프트웨어 아키텍처의 특징</h3><ol><li>간략성<br> 이해하고 추론할 수 있을 정도의 간결성을 유지</li><li>추상화<br> 시스템의 추상적인 표현을 사용</li><li>가시성<br> 시스템이 포함해야 하는 것들을 가시화</li></ol><h3 id="소프트웨어-아키텍처-구성요소"><a href="#소프트웨어-아키텍처-구성요소" class="headerlink" title="소프트웨어 아키텍처 구성요소"></a>소프트웨어 아키텍처 구성요소</h3><ol><li>Architecture Description(AD)<br> 아키텍처를 기록하기 위한 산출물을 의미한다.<br> 하나의 AD는 System의 하나 이상의 View로 구성되어 있다.</li><li>이해관계자<br> 소프트웨어 시스템 개발에 관련된 모든 사람과 조직을 의미하며 고객 개발자 프로젝트 관리자 등을 포함한다.</li><li>관심사<br> 동일한 시스템에 대해 서로 다른 이해관계자의 의견이다.</li><li>관점<br> 서로 다른 역할이나 책임으로 시스템이나 산출물에 대한 서로 다른 관점이다.</li><li>뷰<br> 이해 관계자들가 이들이 가지는 생각이나 견해로부터 전체 시스템을 표현한다.<br> (4 + 1 View)</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;SW 컴포넌트 사이의 상호관계를 설계하고 정의한 시스템 구조이다.&lt;/p&gt;
+&lt;h3 id=&quot;소프트웨어-아키텍처의-특징&quot;&gt;&lt;a href=&quot;#소프트웨어-아키텍처의-특징&quot; class=&quot;headerlink&quot; title=&quot;소프트웨어 아키텍처의 특징&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Software Engineering" scheme="https://sengwoolee.dev/categories/Software-Engineering/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)</title>
@@ -463,56 +513,6 @@
     
       <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>소프트웨어 개발 방법론 - 워터폴</title>
-    <link href="https://sengwoolee.dev/2020/04/05/2020-04-05-1/"/>
-    <id>https://sengwoolee.dev/2020/04/05/2020-04-05-1/</id>
-    <published>2020-04-05T14:50:57.000Z</published>
-    <updated>2020-04-06T12:58:24.398Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://user-images.githubusercontent.com/45837396/78560869-b7d38c00-7851-11ea-9b7e-be5dc53c4209.png" alt="waterfall_process"></p><p>현재 가장 많이 사용되고 있는 개발 모델인 “폭포수 모델(waterfall model)”에 대해 작성한다.</p><blockquote><p>요구분석 &gt; 설계 &gt; 디자인 &gt; 개발 &gt; 검증</p></blockquote><p>폭포수 모델은 순차적인 소프트웨어 개발 프로세스로 각 단계를 완료하고 다음 단계로 이어서 진행하는 개발 프로세스를 말한다.</p><p>또한, 소프트웨어 개발에 구조화된 접근 방식을 제공하고<br>각각의 구분된 단계를 순차적으로 진행하여 마일스톤을 잡거나 프로젝트 관리를 할때 용이하다.</p><p>하지만 각 단계를 완료하고 다음 단계로 진행해야 하기 때문에<br>개발 사이클이 길어지고 고객의 요구사항을 반영하기 어렵다는 이슈가 있다.</p><p>따라서 폭포수 모델을 조직의 니즈에 맞게 수정하여 많이 사용한다.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/45837396/78560869-b7d38c00-7851-11ea-9b7e-be5dc53c4209.png&quot; alt=&quot;waterfall_process&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>About Me</title>
-    <link href="https://sengwoolee.dev/2020/04/04/introduce-myself/"/>
-    <id>https://sengwoolee.dev/2020/04/04/introduce-myself/</id>
-    <published>2020-04-03T15:11:30.000Z</published>
-    <updated>2020-04-05T14:23:31.311Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="기술-Technical-Skills"><a href="#기술-Technical-Skills" class="headerlink" title="기술 (Technical Skills)"></a>기술 (Technical Skills)</h1><p>languages:<br>PHP, HTML, CSS, JS, JAVA, C, JSP<br>Framwork, Library:<br>CodeIgniter, Ajax, Spring, Bootstrap, jQuery,<br>Node.js, React.js, Vue.js<br>Code Management:<br>Git, Github, Gitlab, Tortoise SVN, SVN<br>Database :<br>MySQL, MSSQL, MongoDB, Oracle<br>Web Server :<br>Apache Tomcat, IIS<br>IDE :<br>VSC, eclipse, Atom, IntelliJ IDEA<br>ETC :<br>Jira, Confluence, Trello, Docker, Slack, Jenkins </p><hr><h1 id="경력-Work-Experience"><a href="#경력-Work-Experience" class="headerlink" title="경력 (Work Experience)"></a>경력 (Work Experience)</h1><h2 id="CONSALAD-병역특례-Oct-2019"><a href="#CONSALAD-병역특례-Oct-2019" class="headerlink" title="CONSALAD(병역특례) - Oct 2019 ~"></a>CONSALAD(병역특례) - Oct 2019 ~</h2><h4 id="Web-Frontend-Backend-Developer"><a href="#Web-Frontend-Backend-Developer" class="headerlink" title="Web Frontend/Backend Developer"></a>Web Frontend/Backend Developer</h4><h4 id="Project-Manager-Data-Analyst"><a href="#Project-Manager-Data-Analyst" class="headerlink" title="Project Manager, Data Analyst"></a>Project Manager, Data Analyst</h4><h4 id="Quality-Assurance"><a href="#Quality-Assurance" class="headerlink" title="Quality Assurance"></a>Quality Assurance</h4><hr><p>해외 음원 전송 웹 CMS 프론트/백엔드 신규개발 및 유지보수<br>유통사 음원 전송 웹사이트 기획, 개발<br>해외 음원 신규 프로젝트 기획, 개발<br>신규 개발 프로젝트 개발기획서 작성 및 플랜 산정<br>DB 모델링, 관리 및 데이터 마이닝을 통한 의사결정 자료 산출<br>개발팀 업무 및 일정 관리</p><hr><h2 id="Nexon-Networks-Jul-2016-Jan-2019"><a href="#Nexon-Networks-Jul-2016-Jan-2019" class="headerlink" title="Nexon Networks - Jul 2016 ~ Jan 2019"></a>Nexon Networks - Jul 2016 ~ Jan 2019</h2><h4 id="Quality-Assurance-Project-Lead"><a href="#Quality-Assurance-Project-Lead" class="headerlink" title="Quality Assurance Project Lead"></a>Quality Assurance Project Lead</h4><h4 id="Development-Quality-Assurance-Engineer"><a href="#Development-Quality-Assurance-Engineer" class="headerlink" title="Development Quality Assurance Engineer"></a>Development Quality Assurance Engineer</h4><hr><p>모바일 게임 5개 QA Lead - MORPG, 대전, RTS, TPS, MMORPG<br>모바일 게임 31개 테스트 참여<br>Jira, Confluence, Slack, Jenkins, Redmine 등을 사용한 커뮤니케이션 및 협업 진행<br>테스트 설계/ 단위, 통합 테스트 / 이슈 관리 / 테스트 결과 보고<br>QA 업무 프로세스 개선 TF 발의 및 참여 (IOS 검수 TC 개선, UI/UX 사용성 FQA 등)</p><hr><h1 id="학력-Education"><a href="#학력-Education" class="headerlink" title="학력 (Education)"></a>학력 (Education)</h1><h2 id="Korean-National-Open-University-Prime-College"><a href="#Korean-National-Open-University-Prime-College" class="headerlink" title="Korean National Open University Prime College"></a>Korean National Open University Prime College</h2><p>Industrial Engineering - 2018 ~ 2022</p><hr><h1 id="프로젝트-Project"><a href="#프로젝트-Project" class="headerlink" title="프로젝트 (Project)"></a>프로젝트 (Project)</h1><h3 id="영화-검색-사이트"><a href="#영화-검색-사이트" class="headerlink" title="영화 검색 사이트"></a>영화 검색 사이트</h3><p>Spring, JSP, MVC, 서블릿, 크롤링, Ajax<br>기획, 디자인, 프론트엔드/백엔드 개발<br>커뮤니티 게시판, 영화 평점, 즐겨찾기 기능 구현<br>CSS 애니메이션 (별점, 전환 효과 등) 구현<br>회원 및 세션 기능구현<br>DB 설계 및 모델링</p><hr><h3 id="글-공유-SNS-안드로이드-앱"><a href="#글-공유-SNS-안드로이드-앱" class="headerlink" title="글 공유 SNS 안드로이드 앱"></a>글 공유 SNS 안드로이드 앱</h3><p>JAVA, Spring, JSP, MVC<br>기획, 개발<br>글 검색, 사용자 검색, 글 구독, 친구추가 기능 구현</p><hr><h1 id="자격증-Certification"><a href="#자격증-Certification" class="headerlink" title="자격증 (Certification)"></a>자격증 (Certification)</h1><p>정보처리산업기사 - 한국산업인력공단 / Aug 2019<br>정보처리기능사 - 대한상공회의소 / Apr 2016<br>컴퓨터그래픽스운용기능사 - 한국산업인력공단 / Jul 2016<br>전자상거래운용사 - 대한상공회의소 / Jul 2016<br>전산회계 2급 - 한국세무사회 / Oct 2015<br>전산회계운용사 3급 - 대한상공회의소 / Jul 2015<br>워드프로세서 1급 - 대한상공회의소 / Sep 2015<br>컴퓨터활용능력 2급 - 대한상공회의소 / Jun 2014<br>한국사능력검정시험 2급 - 국사편찬위원회 / Jun 2016</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;기술-Technical-Skills&quot;&gt;&lt;a href=&quot;#기술-Technical-Skills&quot; class=&quot;headerlink&quot; title=&quot;기술 (Technical Skills)&quot;&gt;&lt;/a&gt;기술 (Technical Skills)&lt;/h1&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="About Me" scheme="https://sengwoolee.dev/categories/About-Me/"/>
-    
-    
-      <category term="Introduce" scheme="https://sengwoolee.dev/tags/Introduce/"/>
     
   </entry>
   
