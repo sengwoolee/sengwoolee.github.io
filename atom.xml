@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-05T12:44:58.700Z</updated>
+  <updated>2020-05-06T14:36:07.053Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>소프트웨어 아키텍처 패턴 - 클라이언트-서버 패턴(Client-Server Pattern)</title>
+    <link href="https://sengwoolee.dev/2020/05/06/2020-05-06-1/"/>
+    <id>https://sengwoolee.dev/2020/05/06/2020-05-06-1/</id>
+    <published>2020-05-06T14:33:02.000Z</published>
+    <updated>2020-05-06T14:36:07.053Z</updated>
+    
+    <content type="html"><![CDATA[<p>클라이언트-서버 패턴은 하나의 서버와 다수의 클라이언트로 구성된다. 서버 컴포넌트는 다수의 클라이언트 컴포넌트로 서비스를 제공한다. 클라이언트가 서버에 서비스를 요청하면 서버는 클라이언트에 적절한 서비스를 제공한다. 또한 서버는 계속 클라이언트로부터 요청을 대기한다.</p><p>활용</p><ol><li>이메일</li><li>문서 공유 및 은행 등의 온라인 애플리케이션</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;클라이언트-서버 패턴은 하나의 서버와 다수의 클라이언트로 구성된다. 서버 컴포넌트는 다수의 클라이언트 컴포넌트로 서비스를 제공한다. 클라이언트가 서버에 서비스를 요청하면 서버는 클라이언트에 적절한 서비스를 제공한다. 또한 서버는 계속 클라이언트로
+      
+    
+    </summary>
+    
+    
+      <category term="Software Engineering" scheme="https://sengwoolee.dev/categories/Software-Engineering/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>소프트웨어 아키텍처 패턴 - 계층화 패턴(Layered Pattern)</title>
@@ -481,31 +505,6 @@
       
         &lt;p&gt;CI(Continuous Integration)/CD(Continuous Deploy/Delivery) 의 개념에 대해 작성한다.&lt;/p&gt;
 &lt;h1 id=&quot;CI-Continuous-Integration&quot;&gt;&lt;a href=&quot;#CI-Continuous-I
-      
-    
-    </summary>
-    
-    
-      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>소프트웨어 개발 방법론 - 애자일</title>
-    <link href="https://sengwoolee.dev/2020/04/06/2020-04-06-1/"/>
-    <id>https://sengwoolee.dev/2020/04/06/2020-04-06-1/</id>
-    <published>2020-04-06T12:14:05.000Z</published>
-    <updated>2020-04-06T12:58:07.790Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://user-images.githubusercontent.com/45837396/78560841-aa1e0680-7851-11ea-9f61-434f16afcfe3.png" alt="Agile_process"></p><p>애자일 소프트웨어 개발(Agile software development)은 프로젝트의 생명주기동안 반복적인 개발을 통해 빠른 개발 사이클을 가지는 개발 방법론이다.</p><p>애자일 방법론은 소프트웨어 개발 방법에 있어 계획과 무계획 사이에서 타협점을 찾고자 하는 방법론이다.</p><p>애자일 모델이 전통적인 개발 모형과 다른 점은 문서를 통한 개발이 아니라 실질적인 코딩을 통한 방법론이라는 점이다.</p><p>애자일 개발 방법론은 특정 개발 방법론에 국한되지 않고 애자일한 개발을 가능하게 해주는 방법론을 통칭하는 말이다.</p><p>지속적으로 고객의 요구사항을 반영할 수 있으며 빠른 피드백과 개발을 중시한다.</p><p>애자일 방법론의 사전적 정의는 2001년 애자일 소프트웨어 개발 선언에 의해 공식적으로 명명되었다. </p><blockquote><h3 id="애자일-소프트웨어-개발-선언"><a href="#애자일-소프트웨어-개발-선언" class="headerlink" title="애자일 소프트웨어 개발 선언"></a>애자일 소프트웨어 개발 선언</h3><p>공정과 도구보다 개인과 상호작용을<br>포괄적인 문서보다 작동하는 소프트웨어를<br>계약 협상보다 고객과의 협력을<br>계획을 따르기보다 변화에 대응하기를</p></blockquote><p>하지만 애자일은 개발자 중심적으로 구성된 방법론이며<br>잦은 개발 변경과 프로토타입 개발로 개발자의 과도한 업무를 유발할 수 있다는 단점이 있다.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/45837396/78560841-aa1e0680-7851-11ea-9f61-434f16afcfe3.png&quot; alt=&quot;Agile_process&quot;&gt;&lt;/p&gt;
-
       
     
     </summary>
