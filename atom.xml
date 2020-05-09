@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-06T14:36:07.053Z</updated>
+  <updated>2020-05-09T05:58:10.771Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>소프트웨어 아키텍처 패턴 - 마스터-슬레이브 패턴(Master-Slave Pattern)</title>
+    <link href="https://sengwoolee.dev/2020/05/09/2020-05-09-1/"/>
+    <id>https://sengwoolee.dev/2020/05/09/2020-05-09-1/</id>
+    <published>2020-05-09T05:41:02.000Z</published>
+    <updated>2020-05-09T05:58:10.771Z</updated>
+    
+    <content type="html"><![CDATA[<p>마스터-슬레이브 패턴은 마스터와 슬레이브 두 부분으로 구성된다. 마스터 컴포넌트는 동등한 구조를 지닌 슬레이브 컴포넌트들로 작업을 분산하고 슬레이브가 반환한 결과값으로부터 최종 결과값을 계산한다.</p><p>활용</p><ol><li>데이터베이스 복제에서 마스터 데이터베이스는 신뢰할 수 있는 데이터 소스로 간주되며 슬레이브 데이터베이스는 마스터 데이터베이스와 동기화된다.</li><li>컴퓨터 시스템에서 버스와 연결된 주변장치 (마스터 드라이버와 슬레이브 드라이버)</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;마스터-슬레이브 패턴은 마스터와 슬레이브 두 부분으로 구성된다. 마스터 컴포넌트는 동등한 구조를 지닌 슬레이브 컴포넌트들로 작업을 분산하고 슬레이브가 반환한 결과값으로부터 최종 결과값을 계산한다.&lt;/p&gt;
+&lt;p&gt;활용&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;데이터베
+      
+    
+    </summary>
+    
+    
+      <category term="Software Engineering" scheme="https://sengwoolee.dev/categories/Software-Engineering/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>소프트웨어 아키텍처 패턴 - 클라이언트-서버 패턴(Client-Server Pattern)</title>
@@ -486,31 +513,6 @@
     
     
       <category term="QA" scheme="https://sengwoolee.dev/categories/QA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CI(Continuous Integration)/CD(Continuous Deploy/Delivery)</title>
-    <link href="https://sengwoolee.dev/2020/04/07/2020-04-07-1/"/>
-    <id>https://sengwoolee.dev/2020/04/07/2020-04-07-1/</id>
-    <published>2020-04-07T14:43:31.000Z</published>
-    <updated>2020-04-07T14:59:24.103Z</updated>
-    
-    <content type="html"><![CDATA[<p>CI(Continuous Integration)/CD(Continuous Deploy/Delivery) 의 개념에 대해 작성한다.</p><h1 id="CI-Continuous-Integration"><a href="#CI-Continuous-Integration" class="headerlink" title="CI(Continuous Integration)"></a>CI(Continuous Integration)</h1><p>CI는 지속적 통합(Continuous Integration)으로 코드를 지속적으로 통합하는 것이다.<br>전통적인 방식의 개발은 여러명의 개발자가 협업을 진행할때 각자가 중앙저장소에 통합하는 프로세스로 개발을 진행하다.<br>하지만 컴포넌트, 피쳐의 개발이 완료될 때까지 프로젝트에 참여한 모든 개발자가 중앙저장소에 코드를 통합하지 않았다면 통합과정은 매우 어렵고 힘든 일이 될 것이다.</p><p>이런 문제를 해결하고자 지속적 통합(CI)이 등장했다.<br>CI를 자동화 하지 않은 상태에서 수행하면 개발자는 중앙저장소에 코드를 통합하고, 본인의 코드를 중앙저장소에서 테스트하고, 중앙저장소의 빌드를 테스트를 하는 복잡한 절차를 거쳐 CI를 진행해야 한다.</p><p>자동화된 CI는 개발자는 작업한 코드를 중앙 저장소에 통합하면 테스트와 빌드 등의 복잡한 절차를 자동적으로 처리해준다.<br>따라서 CI와 자동화는 밀접한 관계를 맺고 있다.</p><h1 id="CD-Continuous-Deploy-Delivery"><a href="#CD-Continuous-Deploy-Delivery" class="headerlink" title="CD(Continuous Deploy/Delivery)"></a>CD(Continuous Deploy/Delivery)</h1><p>CD는 지속적 배포(Continuous Deploy/Delivery)으로 지속적으로 소프트웨어가 신뢰 가능한 수준으로 배포될 수 있도록 관리하는 것이다.</p><p>CD를 진행하기 위해서는 CI의 진행이 필수적이다.<br>CI를 진행하며 개발 과정에서 지속적으로 빌드와 테스트를 진행하고,<br>테스트를 통과한 신뢰 가능한 코드에 대해서 테스트 서버와 운영 서버에 바로 배포 및 반영하는 것이다.</p><p>자동화된 CI, CD환경이 구축되면 개발 과정에서 빌드 및 테스트가 자동으로 진행되고 테스트 서버와 운영 서버에 배포되는 과정까지 자동화되는 것이다.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;CI(Continuous Integration)/CD(Continuous Deploy/Delivery) 의 개념에 대해 작성한다.&lt;/p&gt;
-&lt;h1 id=&quot;CI-Continuous-Integration&quot;&gt;&lt;a href=&quot;#CI-Continuous-I
-      
-    
-    </summary>
-    
-    
-      <category term="Development" scheme="https://sengwoolee.dev/categories/Development/"/>
     
     
   </entry>
