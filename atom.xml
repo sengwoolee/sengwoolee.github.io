@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-10T07:41:56.339Z</updated>
+  <updated>2020-05-10T07:44:58.721Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://sengwoolee.dev/2020/05/10/2020-05-10-1/"/>
     <id>https://sengwoolee.dev/2020/05/10/2020-05-10-1/</id>
     <published>2020-05-10T07:37:04.000Z</published>
-    <updated>2020-05-10T07:41:56.339Z</updated>
+    <updated>2020-05-10T07:44:58.721Z</updated>
     
     <content type="html"><![CDATA[<p>파이프 필터 패턴은 데이터 스트림을 생성하고 처리하는 시스템에서 사용할 수 있다. 각 처리 과정은 필터 컴포넌트에서 이루어지며 처리되는 데이터는 파이프를 통해 흐른다. 이 파이프는 버퍼링 또는 동기화 목적으로 사용될 수 있다.</p><p>활용 </p><ol><li>컴파일러, 연속한 필터들은 어휘 분석, 파싱, 의미 분석, 코드 생성을 수행한다.</li><li>생물정보학에서의 워크플로우</li></ol>]]></content>
     
