@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-10T07:44:58.721Z</updated>
+  <updated>2020-05-11T13:54:29.267Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>소프트웨어 아키텍처 패턴 - 브로커 패턴(Broker Pattern)</title>
+    <link href="https://sengwoolee.dev/2020/05/11/2020-05-11-1/"/>
+    <id>https://sengwoolee.dev/2020/05/11/2020-05-11-1/</id>
+    <published>2020-05-11T13:52:26.000Z</published>
+    <updated>2020-05-11T13:54:29.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>브로커 패턴은 분리된 컴포넌트들로 이루어진 분산 시스템에서 사용된다. 이 컴포넌트들은 원격 서비스 실행을 통해 서로 상호작용 할 수 있다. 브로커 컴포넌트는 컴포넌트 간의 통신을 조정하는 역할을 한다.<br>서버는 자신의 기능들을 브로커에 넘겨주며 클라이언트가 브로커에 서비스를 요청하면 브로커는 클라이언트를 자신의 레지스트리에 있는 적합한 서비스로 리디렉션한다.</p><p>활용</p><ol><li>Apache ActiveMQ, Apache Kafka, RabbitMQ, JBoss Messaging - 메시지 브로커 소프트웨어</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;브로커 패턴은 분리된 컴포넌트들로 이루어진 분산 시스템에서 사용된다. 이 컴포넌트들은 원격 서비스 실행을 통해 서로 상호작용 할 수 있다. 브로커 컴포넌트는 컴포넌트 간의 통신을 조정하는 역할을 한다.&lt;br&gt;서버는 자신의 기능들을 브로커에 넘겨주
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>소프트웨어 아키텍처 패턴 - 파이프-필터 패턴(Pipe-Filter Pattern)</title>
@@ -488,31 +510,6 @@
     
     
       <category term="Database" scheme="https://sengwoolee.dev/categories/Database/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>1. Node.js 소개 및 설치</title>
-    <link href="https://sengwoolee.dev/2020/04/12/2020-04-12-1/"/>
-    <id>https://sengwoolee.dev/2020/04/12/2020-04-12-1/</id>
-    <published>2020-04-12T13:34:31.000Z</published>
-    <updated>2020-04-12T13:51:17.452Z</updated>
-    
-    <content type="html"><![CDATA[<p>Node.js는 Chrome V8 자바스크립트 엔진으로 빌드된 자바스크립트 런타임 환경으로 주로 서버 사이드 애플리케이션 개발에 사용되는 소프트웨어 플랫폼이다. </p><p>Node.js는 자바스크립트를 사용해 개발한다. Front-end와 Back-end에서 자바스크립트를 사용할 수 있다는 동형성은 별도의 언어 학습 시간을 단축해주는 장점이 있다.</p><p>Node.js는 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 Request 처리 성능을 가지고 있다. 데이터베이스로부터 대량의 데이터를 취득하여 웹페이지에 표시할 때, 일반적으로 데이터베이스 처리에 대기시간이 발생하기 때문에 웹페이지 표시가 지연되는 현상이 발생한다. Node.js의 모든 API는 비동기 방식으로 동작하여 Non-blocking I/O가 가능하고 단일 스레드 이벤트 루프 모델을 사용하여 보다 가벼운 환경에서도 높은 Request 처리 성능을 가지고 있다.</p><p>Node.js는 데이터를 실시간 처리하여 빈번한 I/O가 발생하는 SPA(Single Page Application)에 적합하지만 CPU 사용률이 높은 애플리케이션에는 권장하지 않는다.</p><p>현재 해당 블로그도 Node.js 기반의 Hexo 로 개발되어 있다.</p><p>Node.js를 사용하기 위해 다음 사이트에서 설치를 진행한다.<br>(<a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a>)</p><p>LTS와 Current버전을 제공하는데 LTS는 Long Term Supported 버전으로 장기적으로 안정적인 지원이 보장되는 버전이다. Current버전은 최신 버전으로 안정적이지 않을 수 있다. 필자는 LTS버전을 사용한다.</p><p>사용하는 운영체제에 적합한 버전을 설치하면 npm 도 함께 설치된다.</p><p>설치가 완료 되었다면 node -v, npm -v를 통해 정상적으로 설치되었는지 확인한다.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Node.js는 Chrome V8 자바스크립트 엔진으로 빌드된 자바스크립트 런타임 환경으로 주로 서버 사이드 애플리케이션 개발에 사용되는 소프트웨어 플랫폼이다. &lt;/p&gt;
-&lt;p&gt;Node.js는 자바스크립트를 사용해 개발한다. Front-end와 B
-      
-    
-    </summary>
-    
-    
-      <category term="Node.js" scheme="https://sengwoolee.dev/categories/Node-js/"/>
     
     
   </entry>
