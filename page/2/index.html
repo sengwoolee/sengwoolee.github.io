@@ -282,6 +282,85 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/05/02/2020-05-04-1/"
+                            aria-label=": CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)"
+                        >
+                            CentOS7 Apache SSL인증서 적용 (Certbot, Let&#39;s encrypt)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-05-02T17:37:29+09:00">
+	
+		    May 02, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Development/">Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <p>환경 : CentOS7 / Apache</p>
+<p>EPEL 저장소 활성화 및 apache용 certbot 설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br><span class="line">yum install certbot python2-certbot-apache</span><br></pre></td></tr></table></figure>
+
+<p>certbot에서 apache를 기반으로 자동구성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache</span><br></pre></td></tr></table></figure>
+
+<p>certbot에서 apache를 수동으로 구성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot --apache certonly</span><br></pre></td></tr></table></figure>
+
+<p>certbot을 설정하여 구성 완료 후 문제가 없을 경우 아래 메시지가 출력된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- Congratulations! Your certificate and chain have been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/fullchain.pem</span><br><span class="line">Your key file has been saved at:</span><br><span class="line">/etc/letsencrypt/live/sengwoolee.dev/privkey.pem</span><br></pre></td></tr></table></figure>
+
+<p>apache 서비스 재시작</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
+
+<p>certbot 인증서 자동 갱신 테스트</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certbot renew --dry-run</span><br></pre></td></tr></table></figure>
+
+<p>자동갱신 추가</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<p>아래 내용 작성 후 저장<br>0       0,12    *       *       *       python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; certbot renew</p>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/05/02/2020-05-04-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/05/01/2020-05-01-1/"
                             aria-label=": Ubuntu Errors were encountered while processing 해결"
                         >
@@ -855,70 +934,6 @@
                         <p>
                             <a
                                 href="/2020/04/18/2020-04-18-1/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2020/04/16/2020-04-16-1/"
-                            aria-label=": 저장 프로시저(Stored Procedure)"
-                        >
-                            저장 프로시저(Stored Procedure)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2020-04-16T23:03:38+09:00">
-	
-		    Apr 16, 2020
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/Database/">Database</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <p>저장 프로시저(Stored Procedure)는 SQL 서버에서 제공되는 프로그래밍 기능이다.<br>쿼리문의 집합으로 동작을 일괄 처리하는 용도이다.</p>
-<p>정의</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--Transact-SQL Stored Procedure Syntax</span></span><br><span class="line"><span class="keyword">CREATE</span> &#123; PROC | <span class="keyword">PROCEDURE</span> &#125; [schema_name.] procedure_name [ ; number ] </span><br><span class="line">    [ &#123; @parameter [ type_schema_name. ] data_type &#125; </span><br><span class="line">        [ VARYING ] [ = default ] [ OUT | OUTPUT ] [READONLY]</span><br><span class="line">    ] [ ,...n ] </span><br><span class="line">[ <span class="keyword">WITH</span> &lt;procedure_option&gt; [ ,...n ] ]</span><br><span class="line">[ <span class="keyword">FOR</span> <span class="keyword">REPLICATION</span> ] </span><br><span class="line"><span class="keyword">AS</span> &#123; [ <span class="keyword">BEGIN</span> ] sql_statement [;] [ ...n ] [ <span class="keyword">END</span> ] &#125;</span><br><span class="line">[;]</span><br><span class="line"> </span><br><span class="line">&lt;procedure_option&gt; ::= </span><br><span class="line">    [ ENCRYPTION ]</span><br><span class="line">    [ RECOMPILE ]</span><br><span class="line">    [ <span class="keyword">EXECUTE</span> <span class="keyword">AS</span> Clause ]</span><br></pre></td></tr></table></figure>
-
-<p>수정<br>ALTER PROCEDURE<br>삭제<br>DROP PROCEDURE</p>
-<p>저장된 프로시저 확인</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> o.name, m.definition</span><br><span class="line"><span class="keyword">FROM</span> sys.sql_modules <span class="keyword">AS</span> m</span><br><span class="line"><span class="keyword">JOIN</span> sys.objects <span class="keyword">AS</span> o</span><br><span class="line"><span class="keyword">ON</span> m.object_id = o.object_id <span class="keyword">AND</span> o.type = <span class="string">'P'</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> sp_helptext usp_error;</span><br></pre></td></tr></table></figure>
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2020/04/16/2020-04-16-1/#post-footer"
                                 class="postShorten-excerpt_link link"
                                 aria-label=""
                             >

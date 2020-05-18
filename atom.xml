@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-17T11:00:33.731Z</updated>
+  <updated>2020-05-18T15:24:56.915Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>소프트웨어 아키텍처 패턴 - 블랙보드 패턴(Blackboard Pattern)</title>
+    <link href="https://sengwoolee.dev/2020/05/19/2020-05-18-1/"/>
+    <id>https://sengwoolee.dev/2020/05/19/2020-05-18-1/</id>
+    <published>2020-05-18T15:09:25.000Z</published>
+    <updated>2020-05-18T15:24:56.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>블랙보드 패턴은 결정 가능한 해결 전략이 알려지지 않은 문제에 유용합니다. 블랙보드 패턴은 3가지 주요 컴포넌트로 구성됩니다. </p><ol><li>블랙보드(Blackboard) : 솔루션의 객체를 포함하는 구조화된 전역 메모리</li><li>자식소스(Knowledge Source) : 자체 표현을 가진 특수 모듈</li><li>제어 컴포넌트(Control Component) : 모듈 선택, 설정 및 실행을 담당</li></ol><p>모든 컴포넌트는 블랙보드에 접근하며 컴포넌트는 블랙보드에 추가되는 새로운 데이터 객체를 생성할 수 있다. 컴포넌트는 블랙보드에서 특정 종류의 데이터를 찾으며 기존의 지식 소스와의 패턴 매칭으로 데이터를 찾는다.</p><p>활용</p><ol><li>음성 인식</li><li>차량 식별 및 추적</li><li>단백질 구조 식별</li><li>수중 음파 탐지기 신호 해석</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;블랙보드 패턴은 결정 가능한 해결 전략이 알려지지 않은 문제에 유용합니다. 블랙보드 패턴은 3가지 주요 컴포넌트로 구성됩니다. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;블랙보드(Blackboard) : 솔루션의 객체를 포함하는 구조화된 전역 메모리&lt;/li&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+      <category term="Software Engineering" scheme="https://sengwoolee.dev/categories/Software-Engineering/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>소프트웨어 아키텍처 패턴 - 모델,뷰,컨트롤러 패턴(Model-View-Controller Pattern)</title>
@@ -481,32 +508,6 @@
       
         &lt;p&gt;같은 결과의 쿼리는 여러 형태로 작성될 수 있으며 옵티마이저가 실행계획을 생성할 때 최대 성능의 쿼리를 작성해야 한다.&lt;/p&gt;
 &lt;p&gt;옵티마이저는 SQL을 가장 빠르고 효율적으로 수행할 최적의 처리경로를 생성해주는 DBMS 내부의 핵심 엔진이다.&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="Database" scheme="https://sengwoolee.dev/categories/Database/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>저장 프로시저(Stored Procedure)</title>
-    <link href="https://sengwoolee.dev/2020/04/16/2020-04-16-1/"/>
-    <id>https://sengwoolee.dev/2020/04/16/2020-04-16-1/</id>
-    <published>2020-04-16T14:03:38.000Z</published>
-    <updated>2020-04-16T14:18:03.991Z</updated>
-    
-    <content type="html"><![CDATA[<p>저장 프로시저(Stored Procedure)는 SQL 서버에서 제공되는 프로그래밍 기능이다.<br>쿼리문의 집합으로 동작을 일괄 처리하는 용도이다.</p><p>정의</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--Transact-SQL Stored Procedure Syntax</span></span><br><span class="line"><span class="keyword">CREATE</span> &#123; PROC | <span class="keyword">PROCEDURE</span> &#125; [schema_name.] procedure_name [ ; number ] </span><br><span class="line">    [ &#123; @parameter [ type_schema_name. ] data_type &#125; </span><br><span class="line">        [ VARYING ] [ = default ] [ OUT | OUTPUT ] [READONLY]</span><br><span class="line">    ] [ ,...n ] </span><br><span class="line">[ <span class="keyword">WITH</span> &lt;procedure_option&gt; [ ,...n ] ]</span><br><span class="line">[ <span class="keyword">FOR</span> <span class="keyword">REPLICATION</span> ] </span><br><span class="line"><span class="keyword">AS</span> &#123; [ <span class="keyword">BEGIN</span> ] sql_statement [;] [ ...n ] [ <span class="keyword">END</span> ] &#125;</span><br><span class="line">[;]</span><br><span class="line"> </span><br><span class="line">&lt;procedure_option&gt; ::= </span><br><span class="line">    [ ENCRYPTION ]</span><br><span class="line">    [ RECOMPILE ]</span><br><span class="line">    [ <span class="keyword">EXECUTE</span> <span class="keyword">AS</span> Clause ]</span><br></pre></td></tr></table></figure><p>수정<br>ALTER PROCEDURE<br>삭제<br>DROP PROCEDURE</p><p>저장된 프로시저 확인</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> o.name, m.definition</span><br><span class="line"><span class="keyword">FROM</span> sys.sql_modules <span class="keyword">AS</span> m</span><br><span class="line"><span class="keyword">JOIN</span> sys.objects <span class="keyword">AS</span> o</span><br><span class="line"><span class="keyword">ON</span> m.object_id = o.object_id <span class="keyword">AND</span> o.type = <span class="string">'P'</span>;</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> sp_helptext usp_error;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;저장 프로시저(Stored Procedure)는 SQL 서버에서 제공되는 프로그래밍 기능이다.&lt;br&gt;쿼리문의 집합으로 동작을 일괄 처리하는 용도이다.&lt;/p&gt;
-&lt;p&gt;정의&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;t
       
     
     </summary>
