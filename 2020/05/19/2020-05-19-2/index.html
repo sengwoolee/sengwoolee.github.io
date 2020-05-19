@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="sengwoolee&#39;s development blog">
-    <title>소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern) - sengwoolee&#39;s development blog</title>
+    <title>컴포넌트(Component) - sengwoolee&#39;s development blog</title>
     <meta name="author" content="sengwoolee">
     
     
@@ -15,16 +15,16 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"인터프리터 패턴은 특정 언어로 작성된 프로그램을 해석하는 컴포넌트를 설계할 때 사용한다. 이는 주로 특정 언어로 작성된 문장 혹은 표현식이라고 하는 프로그램의 각 라인을 수행하는 방법을 지정한다. 기본 아이디어는 언어의 각 기호에 대해 클래스를 만드는 것이다.\n활용\n\nSQL과 같은 데이터베이스 쿼리 언어\n통신 프로토콜을 정의하기 위한 언어\n\n","dateCreated":"2020-05-19T00:30:48+09:00","dateModified":"2020-05-19T00:39:52+09:00","datePublished":"2020-05-19T00:30:48+09:00","description":"","headline":"소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/05/19/2020-05-19-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/05/19/2020-05-19-1/"}</script>
-    <meta name="description" content="인터프리터 패턴은 특정 언어로 작성된 프로그램을 해석하는 컴포넌트를 설계할 때 사용한다. 이는 주로 특정 언어로 작성된 문장 혹은 표현식이라고 하는 프로그램의 각 라인을 수행하는 방법을 지정한다. 기본 아이디어는 언어의 각 기호에 대해 클래스를 만드는 것이다. 활용  SQL과 같은 데이터베이스 쿼리 언어 통신 프로토콜을 정의하기 위한 언어">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"컴포넌트는 소프트웨어 시스템에서 독립적인 업무 또는 독립적인 기능을 수행하는 모듈로서 이후 시스템을 유지보수 하는데 있어 교체 가능한 부품이다.소프트웨어 컴포넌트는 하드웨어의 그래픽카드와 같은 개념으로 독립적인 기능을 수행하는 소프트웨어 모듈이라고 말할 수 있으며 소프트웨어 컴포넌트는 컴포넌트란 말로 대체되어 사용되고 있다.\n컴포넌트는 정의나 형태가 관점에 따라 다양하게 존재하지만 재사용 부품으로서의 컴포넌트가 되기 위해서는 아래의 내용을 만족해야 한다.소스코드가 아닌 실행코드 기반으로 재사용할 수 있도록 이미 구현이 완료되어 있어야 한다.\n컴포넌트는 해당 컴포넌트의 용도, 유형, 기술표준과 인터페이스 등에 대한 정보들에 대해서 명세화가 되어 있어야 한다.교체가능한 컴포넌트를 개발하기 위해서는 표준을 준수하여 개발해야 한다.컴포넌트가 개발되어 배포될 때 관련 문서와 코드들이 독립적인 단위로 패키지화 되어 있어야 한다.컴포넌트는 독립적인 업무 단위로 개발된 것이므로 사용자가 필요한 기능만을 패키지한 컴포넌트를 재사용할 수 있도록 독립적으로 배포 가능해야 한다.\n","dateCreated":"2020-05-19T23:28:09+09:00","dateModified":"2020-05-19T23:33:57+09:00","datePublished":"2020-05-19T23:28:09+09:00","description":"","headline":"컴포넌트(Component)","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/05/19/2020-05-19-2/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/05/19/2020-05-19-2/"}</script>
+    <meta name="description" content="컴포넌트는 소프트웨어 시스템에서 독립적인 업무 또는 독립적인 기능을 수행하는 모듈로서 이후 시스템을 유지보수 하는데 있어 교체 가능한 부품이다.소프트웨어 컴포넌트는 하드웨어의 그래픽카드와 같은 개념으로 독립적인 기능을 수행하는 소프트웨어 모듈이라고 말할 수 있으며 소프트웨어 컴포넌트는 컴포넌트란 말로 대체되어 사용되고 있다. 컴포넌트는 정의나 형태가 관점에">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)">
-<meta property="og:url" content="https://sengwoolee.dev/2020/05/19/2020-05-19-1/index.html">
+<meta property="og:title" content="컴포넌트(Component)">
+<meta property="og:url" content="https://sengwoolee.dev/2020/05/19/2020-05-19-2/index.html">
 <meta property="og:site_name" content="sengwoolee&#39;s development blog">
-<meta property="og:description" content="인터프리터 패턴은 특정 언어로 작성된 프로그램을 해석하는 컴포넌트를 설계할 때 사용한다. 이는 주로 특정 언어로 작성된 문장 혹은 표현식이라고 하는 프로그램의 각 라인을 수행하는 방법을 지정한다. 기본 아이디어는 언어의 각 기호에 대해 클래스를 만드는 것이다. 활용  SQL과 같은 데이터베이스 쿼리 언어 통신 프로토콜을 정의하기 위한 언어">
+<meta property="og:description" content="컴포넌트는 소프트웨어 시스템에서 독립적인 업무 또는 독립적인 기능을 수행하는 모듈로서 이후 시스템을 유지보수 하는데 있어 교체 가능한 부품이다.소프트웨어 컴포넌트는 하드웨어의 그래픽카드와 같은 개념으로 독립적인 기능을 수행하는 소프트웨어 모듈이라고 말할 수 있으며 소프트웨어 컴포넌트는 컴포넌트란 말로 대체되어 사용되고 있다. 컴포넌트는 정의나 형태가 관점에">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-18T15:30:48.000Z">
-<meta property="article:modified_time" content="2020-05-18T15:39:52.427Z">
+<meta property="article:published_time" content="2020-05-19T14:28:09.000Z">
+<meta property="article:modified_time" content="2020-05-19T14:33:57.979Z">
 <meta property="article:author" content="sengwoolee">
 <meta name="twitter:card" content="summary">
     
@@ -282,12 +282,12 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)
+            컴포넌트(Component)
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2020-05-19T00:30:48+09:00">
+    <time datetime="2020-05-19T23:28:09+09:00">
 	
 		    May 19, 2020
     	
@@ -307,12 +307,9 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>인터프리터 패턴은 특정 언어로 작성된 프로그램을 해석하는 컴포넌트를 설계할 때 사용한다. 이는 주로 특정 언어로 작성된 문장 혹은 표현식이라고 하는 프로그램의 각 라인을 수행하는 방법을 지정한다. 기본 아이디어는 언어의 각 기호에 대해 클래스를 만드는 것이다.</p>
-<p>활용</p>
-<ol>
-<li>SQL과 같은 데이터베이스 쿼리 언어</li>
-<li>통신 프로토콜을 정의하기 위한 언어</li>
-</ol>
+            <p>컴포넌트는 소프트웨어 시스템에서 독립적인 업무 또는 독립적인 기능을 수행하는 모듈로서 이후 시스템을 유지보수 하는데 있어 교체 가능한 부품이다.<br>소프트웨어 컴포넌트는 하드웨어의 그래픽카드와 같은 개념으로 독립적인 기능을 수행하는 소프트웨어 모듈이라고 말할 수 있으며 소프트웨어 컴포넌트는 컴포넌트란 말로 대체되어 사용되고 있다.</p>
+<p>컴포넌트는 정의나 형태가 관점에 따라 다양하게 존재하지만 재사용 부품으로서의 컴포넌트가 되기 위해서는 아래의 내용을 만족해야 한다.<br>소스코드가 아닌 실행코드 기반으로 재사용할 수 있도록 이미 구현이 완료되어 있어야 한다.</p>
+<p>컴포넌트는 해당 컴포넌트의 용도, 유형, 기술표준과 인터페이스 등에 대한 정보들에 대해서 명세화가 되어 있어야 한다.<br>교체가능한 컴포넌트를 개발하기 위해서는 표준을 준수하여 개발해야 한다.<br>컴포넌트가 개발되어 배포될 때 관련 문서와 코드들이 독립적인 단위로 패키지화 되어 있어야 한다.<br>컴포넌트는 독립적인 업무 단위로 개발된 것이므로 사용자가 필요한 기능만을 패키지한 컴포넌트를 재사용할 수 있도록 독립적으로 배포 가능해야 한다.</p>
 
             
 
@@ -327,14 +324,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/19/2020-05-19-2/"
-                    data-tooltip="컴포넌트(Component)"
-                    aria-label="PREVIOUS: 컴포넌트(Component)"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -344,9 +338,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/19/2020-05-18-1/"
-                    data-tooltip="소프트웨어 아키텍처 패턴 - 블랙보드 패턴(Blackboard Pattern)"
-                    aria-label="NEXT: 소프트웨어 아키텍처 패턴 - 블랙보드 패턴(Blackboard Pattern)"
+                    href="/2020/05/19/2020-05-19-1/"
+                    data-tooltip="소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)"
+                    aria-label="NEXT: 소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -417,14 +411,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/19/2020-05-19-2/"
-                    data-tooltip="컴포넌트(Component)"
-                    aria-label="PREVIOUS: 컴포넌트(Component)"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -434,9 +425,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/19/2020-05-18-1/"
-                    data-tooltip="소프트웨어 아키텍처 패턴 - 블랙보드 패턴(Blackboard Pattern)"
-                    aria-label="NEXT: 소프트웨어 아키텍처 패턴 - 블랙보드 패턴(Blackboard Pattern)"
+                    href="/2020/05/19/2020-05-19-1/"
+                    data-tooltip="소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)"
+                    aria-label="NEXT: 소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -545,9 +536,9 @@
     
         <script>
           var disqus_config = function() {
-            this.page.url = 'https://sengwoolee.dev/2020/05/19/2020-05-19-1/';
+            this.page.url = 'https://sengwoolee.dev/2020/05/19/2020-05-19-2/';
               
-            this.page.identifier = '2020/05/19/2020-05-19-1/';
+            this.page.identifier = '2020/05/19/2020-05-19-2/';
               
           };
           (function() {

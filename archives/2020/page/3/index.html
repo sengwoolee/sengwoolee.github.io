@@ -283,6 +283,70 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2020/04/19/2020-04-19-1/"
+                            aria-label=": SQL - GROUP BY, HAVING "
+                        >
+                            SQL - GROUP BY, HAVING 
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-04-19T23:39:52+09:00">
+	
+		    Apr 19, 2020
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Database/">Database</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h2 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h2><p>데이터를 원하는 그룹으로 나누어 가져온다.<br>그룹의 컬럼명을 GROUP BY 절 뒤에 추가해 사용한다.<br>집계함수와 함께 사용되는 상수는 GROUP BY 절에 추가하지 않아도 된다.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TEST_NAME, TEST_TEXT, <span class="keyword">COUNT</span>(*)</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">TEST</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TEST_NAME</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h2><p>WHERE 절에서는 집계함수 사용이 불가능하다.<br>집계함수를 가지고 조건비교를 할 때 HAVING 을 사용한다.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TEST_NAME, TEST_TEXT, <span class="keyword">COUNT</span>(TEST_NO)</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">TEST</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TEST_NAME</span><br><span class="line"><span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(TEST_NO) &gt; <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/04/19/2020-04-19-1/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2020/04/18/2020-04-18-1/"
                             aria-label=": SQL 튜닝"
                         >
@@ -901,72 +965,6 @@
                         <p>
                             <a
                                 href="/2020/04/06/2020-04-06-1/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2020/04/05/2020-04-05-1/"
-                            aria-label=": 소프트웨어 개발 방법론 - 워터폴"
-                        >
-                            소프트웨어 개발 방법론 - 워터폴
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2020-04-05T23:50:57+09:00">
-	
-		    Apr 05, 2020
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/Development/">Development</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <p><img src="https://user-images.githubusercontent.com/45837396/78560869-b7d38c00-7851-11ea-9b7e-be5dc53c4209.png" alt="waterfall_process"></p>
-<p>현재 가장 많이 사용되고 있는 개발 모델인 “폭포수 모델(waterfall model)”에 대해 작성한다.</p>
-<blockquote>
-<p>요구분석 &gt; 설계 &gt; 디자인 &gt; 개발 &gt; 검증</p>
-</blockquote>
-<p>폭포수 모델은 순차적인 소프트웨어 개발 프로세스로 각 단계를 완료하고 다음 단계로 이어서 진행하는 개발 프로세스를 말한다.</p>
-<p>또한, 소프트웨어 개발에 구조화된 접근 방식을 제공하고<br>각각의 구분된 단계를 순차적으로 진행하여 마일스톤을 잡거나 프로젝트 관리를 할때 용이하다.</p>
-<p>하지만 각 단계를 완료하고 다음 단계로 진행해야 하기 때문에<br>개발 사이클이 길어지고 고객의 요구사항을 반영하기 어렵다는 이슈가 있다.</p>
-<p>따라서 폭포수 모델을 조직의 니즈에 맞게 수정하여 많이 사용한다.</p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2020/04/05/2020-04-05-1/#post-footer"
                                 class="postShorten-excerpt_link link"
                                 aria-label=""
                             >

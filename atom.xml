@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sengwoolee.dev/"/>
-  <updated>2020-05-18T15:39:52.427Z</updated>
+  <updated>2020-05-19T14:33:57.979Z</updated>
   <id>https://sengwoolee.dev/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>컴포넌트(Component)</title>
+    <link href="https://sengwoolee.dev/2020/05/19/2020-05-19-2/"/>
+    <id>https://sengwoolee.dev/2020/05/19/2020-05-19-2/</id>
+    <published>2020-05-19T14:28:09.000Z</published>
+    <updated>2020-05-19T14:33:57.979Z</updated>
+    
+    <content type="html"><![CDATA[<p>컴포넌트는 소프트웨어 시스템에서 독립적인 업무 또는 독립적인 기능을 수행하는 모듈로서 이후 시스템을 유지보수 하는데 있어 교체 가능한 부품이다.<br>소프트웨어 컴포넌트는 하드웨어의 그래픽카드와 같은 개념으로 독립적인 기능을 수행하는 소프트웨어 모듈이라고 말할 수 있으며 소프트웨어 컴포넌트는 컴포넌트란 말로 대체되어 사용되고 있다.</p><p>컴포넌트는 정의나 형태가 관점에 따라 다양하게 존재하지만 재사용 부품으로서의 컴포넌트가 되기 위해서는 아래의 내용을 만족해야 한다.<br>소스코드가 아닌 실행코드 기반으로 재사용할 수 있도록 이미 구현이 완료되어 있어야 한다.</p><p>컴포넌트는 해당 컴포넌트의 용도, 유형, 기술표준과 인터페이스 등에 대한 정보들에 대해서 명세화가 되어 있어야 한다.<br>교체가능한 컴포넌트를 개발하기 위해서는 표준을 준수하여 개발해야 한다.<br>컴포넌트가 개발되어 배포될 때 관련 문서와 코드들이 독립적인 단위로 패키지화 되어 있어야 한다.<br>컴포넌트는 독립적인 업무 단위로 개발된 것이므로 사용자가 필요한 기능만을 패키지한 컴포넌트를 재사용할 수 있도록 독립적으로 배포 가능해야 한다.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;컴포넌트는 소프트웨어 시스템에서 독립적인 업무 또는 독립적인 기능을 수행하는 모듈로서 이후 시스템을 유지보수 하는데 있어 교체 가능한 부품이다.&lt;br&gt;소프트웨어 컴포넌트는 하드웨어의 그래픽카드와 같은 개념으로 독립적인 기능을 수행하는 소프트웨어 
+      
+    
+    </summary>
+    
+    
+      <category term="Software Engineering" scheme="https://sengwoolee.dev/categories/Software-Engineering/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>소프트웨어 아키텍처 패턴 - 인터프리터 패턴(Interpreter Pattern)</title>
@@ -483,30 +507,6 @@
       
         &lt;p&gt;Index는 테이블에 저장된 데이터를 빠르게 조회하기 위한 데이터베이스 객체이다.&lt;br&gt;대부분 B-Tress, B+Tree 구조를 가진다.&lt;br&gt;Index는 논리적/물리적으로 테이블과 독립적이다.&lt;/p&gt;
 &lt;p&gt;테이블의 레코드는 순서 없이 저장되는
-      
-    
-    </summary>
-    
-    
-      <category term="Database" scheme="https://sengwoolee.dev/categories/Database/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SQL - GROUP BY, HAVING </title>
-    <link href="https://sengwoolee.dev/2020/04/19/2020-04-19-1/"/>
-    <id>https://sengwoolee.dev/2020/04/19/2020-04-19-1/</id>
-    <published>2020-04-19T14:39:52.000Z</published>
-    <updated>2020-04-19T14:50:13.346Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h2><p>데이터를 원하는 그룹으로 나누어 가져온다.<br>그룹의 컬럼명을 GROUP BY 절 뒤에 추가해 사용한다.<br>집계함수와 함께 사용되는 상수는 GROUP BY 절에 추가하지 않아도 된다.</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TEST_NAME, TEST_TEXT, <span class="keyword">COUNT</span>(*)</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">TEST</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TEST_NAME</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure><h2 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h2><p>WHERE 절에서는 집계함수 사용이 불가능하다.<br>집계함수를 가지고 조건비교를 할 때 HAVING 을 사용한다.</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TEST_NAME, TEST_TEXT, <span class="keyword">COUNT</span>(TEST_NO)</span><br><span class="line"><span class="keyword">FROM</span> <span class="keyword">TEST</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> TEST_NAME</span><br><span class="line"><span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(TEST_NO) &gt; <span class="number">3</span>;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;GROUP-BY&quot;&gt;&lt;a href=&quot;#GROUP-BY&quot; class=&quot;headerlink&quot; title=&quot;GROUP BY&quot;&gt;&lt;/a&gt;GROUP BY&lt;/h2&gt;&lt;p&gt;데이터를 원하는 그룹으로 나누어 가져온다.&lt;br&gt;그룹의 컬럼명을 GROUP BY 절
       
     
     </summary>
