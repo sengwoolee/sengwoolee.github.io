@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="sengwoolee&#39;s development blog">
-    <title>정보공학 방법론 - sengwoolee&#39;s development blog</title>
+    <title>객체지향 방법론 - sengwoolee&#39;s development blog</title>
     <meta name="author" content="sengwoolee">
     
     
@@ -15,16 +15,16 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"정보공학 개발 방법론\n정보공학 개발 방법론의 절차ISP(Information Strategy Planning): 정보전략계획 - 기업의 중장기 정보화 전략 수립BAA(Business Area Analysis): 업무영역분석 - 업무영역별 데이터와 프로세스 모델링, 연관분석BSD(Business System Design): 업무시스템설계 - 프로세스와 데이터 설계SC(System Construction): 시스템구축 - 데이터 상세설계, 프로그램 코딩\n\n정보공학 개발 방법론은 비즈니스 시스템 규모 성장과 소프트웨어 공학 발전에 따라 1980년대 중반에 등장한 방법론으로 기업의 전사적인 관점에서 출발해 데이터 중심으로 시스템을 구축하는 방법론이다. 기업의 중장기 정보화 전략을 수립하는 ISP와 업무 영역을 분석하는 BAA(Business System Design) 그리고 시스템을 구축하는 SC(System Construction) 단계로 구성된다.\nISP단계에서는 기업의 경영전략을 뒷받침할 수 있는 정보화 전략을 수립하기 위해 업무프로세스와 시스템을 분석하고 미래 아키텍처와 전략계획을 수립하게 된다.\nBAA단계에서는 기업의 업무 현황을 분석해서 개념 수준의 데이터와 프로세스를 설계하는 업무분석 단계이다.\nBSD단계는 실질적으로 시스템을 설계하는 단계로 우리가 많이 사용하고 있는 논리적 ER다이어그램으로 데이터를 설계하고 분할 다이어그램 액션 다이어그램 의존 다이어그램을 사용해 프로세스를 설계한다.\nSC단계에서는 물리적 데이터베이스를 설계하고 BSD단계에서 작성한 산출물을 바탕으로 프로그램을 개발하게 된다. 이론적인 정보공학 방법론에서는 BSD단계에서 작성한 산출물을 바탕으로 프로그램 코드를 생성할 수 있는데, 대부분의 프로젝트에서는 설계문서만 만들고 코드는 개발자가 직접 만드는 방식으로 개발을 진행한다.\n\n정보공학 개발 방법론의 특징ISP 중심 - 기업의 경영전략을 지원하기 위한 IT 전략수립에서 출발데이터 중심 - 비즈니스의 중심은 데이터, 데이터 관점의 설계공학적 접근 - Case Tool과 같은 자동화 도구 사용 설계 후 코드 자동생성\n\n정보공학 개발 방법론은 다양한 특징을 가지고 있지만 대표적으로 다음의 세개로 요약할 수 있다. 첫째 정보공학 개발 방법론은 ISP중심이다. ISP를 통해 기업 전체적인 업무와 정보화 현황을 정리한 다음 시스템 구축을 위한 계획을 수립한다. 둘째로 데이터 중심 방법론이다. 비즈니스의 중심은 데이터에 있다고 생각하고 IT도 데이터 관점으로 설계한다. 마지막으로 공학적으로 접근한다는 특징을 가지고 있다. 케이스 툴과 같은 자동화 도구를 통해 설계하고 코드를 자동으로 생성한다. 생성된 코드는 프로그램으로 동작하지 않는다. 하지만 프로그램이 가져야 하는 전체적인 윤곽을 잡아주는 역할을 한다.\n현재 산업계에서 가장 많이 사용하는 방법론은 정보공학 방법론이다. 기업에서 3~5년 주기로 ISP 프로젝트를 통해 정보화 전략을 수립하고 그에 따른 정보 시스템을 구축한다. 기업 업무 중심에는 데이터베이스가 있으면 시스템은 데이터를 어떻게 하면 잘 쌓을지 그리고 어떻게 데이터를 활용해 기업의 생산성을 높일지 고민하면서 발전하고 있다. 지금 화두가 되는 인공지능 기술도 기업에서 쌓아놓은 데이터 기반 하에 성능을 발휘할 수 있다.\n프로젝트 관점에서 정보공학 방법론을 살펴보면 실제 프로젝트 개발 과정에서 필요한 산출물의 종류는 그렇게 많지 않다. 설계 시 스토리보드, 데이터 설계서, UI 설계서 등을 작성하고 개발 과정에서는 이를 바탕으로 물리적 테이블과 프로그램 코드가 만들어진다. 이 관점에서 BAA에 해당하는 요구분석 단계에서는 요구사항 명세서가 만들어지고 BSD에 해당하는 시스템 설계 단계에서는 논리 ERD와 업무 프로세서를 설명하는 프로세스 구조도/흐름도가 만들어 진다. 그리고 SC에 해당하는 개발 단계에서는 물리 ERD, UI, 프로그램 코드가 개발된다.\n정보공학 방법론은 일반적으로 수행하는 개발방식이 정보공학 방법론의 간소화 버전이라 생각하면 된다.\n","dateCreated":"2020-05-31T00:15:50+09:00","dateModified":"2020-05-31T22:48:39+09:00","datePublished":"2020-05-31T00:15:50+09:00","description":"","headline":"정보공학 방법론","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/05/31/2020-05-31-1/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/05/31/2020-05-31-1/"}</script>
-    <meta name="description" content="정보공학 개발 방법론 정보공학 개발 방법론의 절차ISP(Information Strategy Planning): 정보전략계획 - 기업의 중장기 정보화 전략 수립BAA(Business Area Analysis): 업무영역분석 - 업무영역별 데이터와 프로세스 모델링, 연관분석BSD(Business System Design): 업무시스템설계 - 프로세스와 데이터">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png"},"articleBody":"객체지향 방법론객체란 사물을 논리적으로 추상화한 것이다. 예를들어 자동차가 있다고 가정할 때 자동차는 바퀴, 유리창, 사이드미러, 기어, 엑셀, 브레이크 등 눈으로 볼 수 있는 수천가지 부품으로 구성돼 있다. 추상화란 우리가 관심 있는 부분만 추려내는 것이다. 자동차 객체를 만드는데 다른건 다 필요없고 앞뒤로 움직이는 것만 관심이 있다면 기어, 엑셀, 브레이크 속성과 전진, 후진, 정지, 가속 기능만 있으면 된다. 따라서 객체는 사물에 대해 관심 있는 부분만 추려내 추상화한 것이다.\n객체는 데이터와 기능을 동시에 가지고 있다. 하나의 객체는 다른 객체가 가지고 있는 데이터와 기능을 사용할 수 있고 이런 능력은 객체간 결합을 가능하게 한다. 객체지향 방법론은 객체의 특성을 활용하여 객체를 생성하고 구체화하여 프로그램을 진행한다. 정보공학 방법론처럼 데이터와 프로세스를 따로 설계하지 않고 데이터와 프로세스를 모두 객체에 담아 오로지 객체의 관점에서 프로그램을 개발한다.\n객체지향 방법론에서는 분석, 설계, 구현의 전 과정을 객체 중심으로 진행한다. 심지어 데이터를 저장하는 테이블도 따로 설계하지 않고 데이터 객체로 설계한다. 데이터는 결국 데이터베이스에 저장되는데 만일 데이터베이스가 객체행 데이터베이스라면 별다른 변환과정 없이 데이터 객체를 그대로 저장하면 되지만 관계형 데이터베이스를 사용한다면 객체를 관계형 테이블로 변환하는 과정이 필요하다. 이 과정을 객체-관계 간 매핑이라고 한다. 현재 대부분의 회사에서 관계형 데이터베이스를 사용하고 있기 때문에 객체-관계 간 매핑은 필수적인 과정이라고 할 수 있다.\n객체지향 방법론은 높은 재사용성과 안정성을 갖고 있다는 단점이 있으나 관계형 데이터베이스로 구성되어 있는 현재 산업계에서 객체-관계 간 매핑 과정이 필수적이기 때문에 활발하게 사용되지는 않는다. 관계형 데이터베이스에서 제공하는 SQL은 풍부한 기능을 가지고 있어 많은 개발자들이 이 분야에서 지식과 노하우를 축적하고 있다. 이 또한 관계형 데이터베이스에서 객체형 데이터베이스로의 이전을 가로막는 장애물이 되고 있다.\n많은 프로젝트에서 자바와 같은 객체지향 언어를 사용하기 때문에 프로세스 설계 과정에서는 객체지향 개발 방법론 개념이 많이 사용되고 있으며 데이터 설계 과정에서는 기존의 정보공학 방법론이 많이 사용된다. 프로그램은 객체지향 언어를 사용하고 데이터베이스는 관계형으로 설계한다.\n","dateCreated":"2020-05-31T22:49:40+09:00","dateModified":"2020-05-31T23:09:50+09:00","datePublished":"2020-05-31T22:49:40+09:00","description":"","headline":"객체지향 방법론","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://sengwoolee.dev/2020/05/31/2020-05-31-2/"},"publisher":{"@type":"Organization","name":"sengwoolee","sameAs":["https://github.com/sengwoolee","http://stackoverflow.com/users/10808643","mailto:leesengwoo555@gmail.com"],"image":"sengwoolee.png","logo":{"@type":"ImageObject","url":"sengwoolee.png"}},"url":"https://sengwoolee.dev/2020/05/31/2020-05-31-2/"}</script>
+    <meta name="description" content="객체지향 방법론객체란 사물을 논리적으로 추상화한 것이다. 예를들어 자동차가 있다고 가정할 때 자동차는 바퀴, 유리창, 사이드미러, 기어, 엑셀, 브레이크 등 눈으로 볼 수 있는 수천가지 부품으로 구성돼 있다. 추상화란 우리가 관심 있는 부분만 추려내는 것이다. 자동차 객체를 만드는데 다른건 다 필요없고 앞뒤로 움직이는 것만 관심이 있다면 기어, 엑셀, 브레">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="정보공학 방법론">
-<meta property="og:url" content="https://sengwoolee.dev/2020/05/31/2020-05-31-1/index.html">
+<meta property="og:title" content="객체지향 방법론">
+<meta property="og:url" content="https://sengwoolee.dev/2020/05/31/2020-05-31-2/index.html">
 <meta property="og:site_name" content="sengwoolee&#39;s development blog">
-<meta property="og:description" content="정보공학 개발 방법론 정보공학 개발 방법론의 절차ISP(Information Strategy Planning): 정보전략계획 - 기업의 중장기 정보화 전략 수립BAA(Business Area Analysis): 업무영역분석 - 업무영역별 데이터와 프로세스 모델링, 연관분석BSD(Business System Design): 업무시스템설계 - 프로세스와 데이터">
+<meta property="og:description" content="객체지향 방법론객체란 사물을 논리적으로 추상화한 것이다. 예를들어 자동차가 있다고 가정할 때 자동차는 바퀴, 유리창, 사이드미러, 기어, 엑셀, 브레이크 등 눈으로 볼 수 있는 수천가지 부품으로 구성돼 있다. 추상화란 우리가 관심 있는 부분만 추려내는 것이다. 자동차 객체를 만드는데 다른건 다 필요없고 앞뒤로 움직이는 것만 관심이 있다면 기어, 엑셀, 브레">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-30T15:15:50.000Z">
-<meta property="article:modified_time" content="2020-05-31T13:48:39.230Z">
+<meta property="article:published_time" content="2020-05-31T13:49:40.000Z">
+<meta property="article:modified_time" content="2020-05-31T14:09:50.021Z">
 <meta property="article:author" content="sengwoolee">
 <meta name="twitter:card" content="summary">
     
@@ -282,12 +282,12 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            정보공학 방법론
+            객체지향 방법론
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2020-05-31T00:15:50+09:00">
+    <time datetime="2020-05-31T22:49:40+09:00">
 	
 		    May 31, 2020
     	
@@ -307,21 +307,11 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <h3 id="정보공학-개발-방법론"><a href="#정보공학-개발-방법론" class="headerlink" title="정보공학 개발 방법론"></a>정보공학 개발 방법론</h3><ul>
-<li>정보공학 개발 방법론의 절차<br>ISP(Information Strategy Planning): 정보전략계획 - 기업의 중장기 정보화 전략 수립<br>BAA(Business Area Analysis): 업무영역분석 - 업무영역별 데이터와 프로세스 모델링, 연관분석<br>BSD(Business System Design): 업무시스템설계 - 프로세스와 데이터 설계<br>SC(System Construction): 시스템구축 - 데이터 상세설계, 프로그램 코딩</li>
-</ul>
-<p>정보공학 개발 방법론은 비즈니스 시스템 규모 성장과 소프트웨어 공학 발전에 따라 1980년대 중반에 등장한 방법론으로 기업의 전사적인 관점에서 출발해 데이터 중심으로 시스템을 구축하는 방법론이다. 기업의 중장기 정보화 전략을 수립하는 ISP와 업무 영역을 분석하는 BAA(Business System Design) 그리고 시스템을 구축하는 SC(System Construction) 단계로 구성된다.</p>
-<p>ISP단계에서는 기업의 경영전략을 뒷받침할 수 있는 정보화 전략을 수립하기 위해 업무프로세스와 시스템을 분석하고 미래 아키텍처와 전략계획을 수립하게 된다.</p>
-<p>BAA단계에서는 기업의 업무 현황을 분석해서 개념 수준의 데이터와 프로세스를 설계하는 업무분석 단계이다.</p>
-<p>BSD단계는 실질적으로 시스템을 설계하는 단계로 우리가 많이 사용하고 있는 논리적 ER다이어그램으로 데이터를 설계하고 분할 다이어그램 액션 다이어그램 의존 다이어그램을 사용해 프로세스를 설계한다.</p>
-<p>SC단계에서는 물리적 데이터베이스를 설계하고 BSD단계에서 작성한 산출물을 바탕으로 프로그램을 개발하게 된다. 이론적인 정보공학 방법론에서는 BSD단계에서 작성한 산출물을 바탕으로 프로그램 코드를 생성할 수 있는데, 대부분의 프로젝트에서는 설계문서만 만들고 코드는 개발자가 직접 만드는 방식으로 개발을 진행한다.</p>
-<ul>
-<li>정보공학 개발 방법론의 특징<br>ISP 중심 - 기업의 경영전략을 지원하기 위한 IT 전략수립에서 출발<br>데이터 중심 - 비즈니스의 중심은 데이터, 데이터 관점의 설계<br>공학적 접근 - Case Tool과 같은 자동화 도구 사용 설계 후 코드 자동생성</li>
-</ul>
-<p>정보공학 개발 방법론은 다양한 특징을 가지고 있지만 대표적으로 다음의 세개로 요약할 수 있다. 첫째 정보공학 개발 방법론은 ISP중심이다. ISP를 통해 기업 전체적인 업무와 정보화 현황을 정리한 다음 시스템 구축을 위한 계획을 수립한다. 둘째로 데이터 중심 방법론이다. 비즈니스의 중심은 데이터에 있다고 생각하고 IT도 데이터 관점으로 설계한다. 마지막으로 공학적으로 접근한다는 특징을 가지고 있다. 케이스 툴과 같은 자동화 도구를 통해 설계하고 코드를 자동으로 생성한다. 생성된 코드는 프로그램으로 동작하지 않는다. 하지만 프로그램이 가져야 하는 전체적인 윤곽을 잡아주는 역할을 한다.</p>
-<p>현재 산업계에서 가장 많이 사용하는 방법론은 정보공학 방법론이다. 기업에서 3~5년 주기로 ISP 프로젝트를 통해 정보화 전략을 수립하고 그에 따른 정보 시스템을 구축한다. 기업 업무 중심에는 데이터베이스가 있으면 시스템은 데이터를 어떻게 하면 잘 쌓을지 그리고 어떻게 데이터를 활용해 기업의 생산성을 높일지 고민하면서 발전하고 있다. 지금 화두가 되는 인공지능 기술도 기업에서 쌓아놓은 데이터 기반 하에 성능을 발휘할 수 있다.</p>
-<p>프로젝트 관점에서 정보공학 방법론을 살펴보면 실제 프로젝트 개발 과정에서 필요한 산출물의 종류는 그렇게 많지 않다. 설계 시 스토리보드, 데이터 설계서, UI 설계서 등을 작성하고 개발 과정에서는 이를 바탕으로 물리적 테이블과 프로그램 코드가 만들어진다. 이 관점에서 BAA에 해당하는 요구분석 단계에서는 요구사항 명세서가 만들어지고 BSD에 해당하는 시스템 설계 단계에서는 논리 ERD와 업무 프로세서를 설명하는 프로세스 구조도/흐름도가 만들어 진다. 그리고 SC에 해당하는 개발 단계에서는 물리 ERD, UI, 프로그램 코드가 개발된다.</p>
-<p>정보공학 방법론은 일반적으로 수행하는 개발방식이 정보공학 방법론의 간소화 버전이라 생각하면 된다.</p>
+            <h3 id="객체지향-방법론"><a href="#객체지향-방법론" class="headerlink" title="객체지향 방법론"></a>객체지향 방법론</h3><p>객체란 사물을 논리적으로 추상화한 것이다. 예를들어 자동차가 있다고 가정할 때 자동차는 바퀴, 유리창, 사이드미러, 기어, 엑셀, 브레이크 등 눈으로 볼 수 있는 수천가지 부품으로 구성돼 있다. 추상화란 우리가 관심 있는 부분만 추려내는 것이다. 자동차 객체를 만드는데 다른건 다 필요없고 앞뒤로 움직이는 것만 관심이 있다면 기어, 엑셀, 브레이크 속성과 전진, 후진, 정지, 가속 기능만 있으면 된다. 따라서 객체는 사물에 대해 관심 있는 부분만 추려내 추상화한 것이다.</p>
+<p>객체는 데이터와 기능을 동시에 가지고 있다. 하나의 객체는 다른 객체가 가지고 있는 데이터와 기능을 사용할 수 있고 이런 능력은 객체간 결합을 가능하게 한다. 객체지향 방법론은 객체의 특성을 활용하여 객체를 생성하고 구체화하여 프로그램을 진행한다. 정보공학 방법론처럼 데이터와 프로세스를 따로 설계하지 않고 데이터와 프로세스를 모두 객체에 담아 오로지 객체의 관점에서 프로그램을 개발한다.</p>
+<p>객체지향 방법론에서는 분석, 설계, 구현의 전 과정을 객체 중심으로 진행한다. 심지어 데이터를 저장하는 테이블도 따로 설계하지 않고 데이터 객체로 설계한다. 데이터는 결국 데이터베이스에 저장되는데 만일 데이터베이스가 객체행 데이터베이스라면 별다른 변환과정 없이 데이터 객체를 그대로 저장하면 되지만 관계형 데이터베이스를 사용한다면 객체를 관계형 테이블로 변환하는 과정이 필요하다. 이 과정을 객체-관계 간 매핑이라고 한다. 현재 대부분의 회사에서 관계형 데이터베이스를 사용하고 있기 때문에 객체-관계 간 매핑은 필수적인 과정이라고 할 수 있다.</p>
+<p>객체지향 방법론은 높은 재사용성과 안정성을 갖고 있다는 단점이 있으나 관계형 데이터베이스로 구성되어 있는 현재 산업계에서 객체-관계 간 매핑 과정이 필수적이기 때문에 활발하게 사용되지는 않는다. 관계형 데이터베이스에서 제공하는 SQL은 풍부한 기능을 가지고 있어 많은 개발자들이 이 분야에서 지식과 노하우를 축적하고 있다. 이 또한 관계형 데이터베이스에서 객체형 데이터베이스로의 이전을 가로막는 장애물이 되고 있다.</p>
+<p>많은 프로젝트에서 자바와 같은 객체지향 언어를 사용하기 때문에 프로세스 설계 과정에서는 객체지향 개발 방법론 개념이 많이 사용되고 있으며 데이터 설계 과정에서는 기존의 정보공학 방법론이 많이 사용된다. 프로그램은 객체지향 언어를 사용하고 데이터베이스는 관계형으로 설계한다.</p>
 
             
 
@@ -336,14 +326,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/31/2020-05-31-2/"
-                    data-tooltip="객체지향 방법론"
-                    aria-label="PREVIOUS: 객체지향 방법론"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -353,9 +340,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/30/2020-05-30-1/"
-                    data-tooltip="소프트웨어 개발 방법론"
-                    aria-label="NEXT: 소프트웨어 개발 방법론"
+                    href="/2020/05/31/2020-05-31-1/"
+                    data-tooltip="정보공학 방법론"
+                    aria-label="NEXT: 정보공학 방법론"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -426,14 +413,11 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                <a
-                    class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/31/2020-05-31-2/"
-                    data-tooltip="객체지향 방법론"
-                    aria-label="PREVIOUS: 객체지향 방법론"
-                >
-                    
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
                         <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
@@ -443,9 +427,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2020/05/30/2020-05-30-1/"
-                    data-tooltip="소프트웨어 개발 방법론"
-                    aria-label="NEXT: 소프트웨어 개발 방법론"
+                    href="/2020/05/31/2020-05-31-1/"
+                    data-tooltip="정보공학 방법론"
+                    aria-label="NEXT: 정보공학 방법론"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -554,9 +538,9 @@
     
         <script>
           var disqus_config = function() {
-            this.page.url = 'https://sengwoolee.dev/2020/05/31/2020-05-31-1/';
+            this.page.url = 'https://sengwoolee.dev/2020/05/31/2020-05-31-2/';
               
-            this.page.identifier = '2020/05/31/2020-05-31-1/';
+            this.page.identifier = '2020/05/31/2020-05-31-2/';
               
           };
           (function() {
